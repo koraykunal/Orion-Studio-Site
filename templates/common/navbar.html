@@ -1,0 +1,199 @@
+{% load static %}
+<style>
+    #nav-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    nav {
+        width: 1200px;
+    }
+
+    .nav-item {
+        {#font-family: "Garamond";#}
+    }
+
+    .dropdown-menu {
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-color: var(--background);
+        width: max-content;
+        align-self: center;
+        padding: 2rem 0 2rem 1rem;
+        background-attachment: fixed;
+        background-position-x: right;
+        background-blend-mode: soft-light;
+        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 450" fill="%23F5CD6D"><path d="M208 394.6C94.4 387 4 247 64 146.9c28-49 85.9-78 142-75 58.7 8.3 102.6 61.1 108 118.5 3.8 56-35.1 119.9-95.2 121.6-33 .4-68.7-23.3-83.7-51.7-22.6-38-10.7-92.3 31.8-108.3 31.6-12.2 74 9.1 82.4 42.8 9.4 34.7-36.8 61.7-63.6 42.4-29.8-32.3 19.2-58 46.8-36.3-5.2-31.5-51.9-49.7-74.5-24-53.7 53.9 31.8 152.9 95.6 107.4 40-27.8 54-87.8 33.2-129.3-19.6-42.7-60.2-74.1-107.1-66-67.6 9-123.4 68-117 138.7 7.7 86 98.2 173.8 188.2 145.9 43.9-12.2 78-43.3 100.9-79.2 36.3-70.9 47-153.2 23-229.2-1.5-4.5 1.8-8.8 6.1-9.9 4.4-1 9.4 1.1 10.9 5.6 23.7 75 15 152.6-16 224C350.5 345.5 274 400 208.2 394.6Zm10.7-170c2.5-1.4 4-2.2 7.1-5-.7-1.2-1-2.5-.9-3.8-7.5-8.5-24.7-11.3-30.6-.2-.8 3.6.7 6.8 3.6 10 5.4 4 16.8.2 20.8-1Z"></path></svg>')
+    }
+
+    .dropdown-menu li {
+        opacity: 0;
+        background-color: transparent !important;
+
+        & a {
+            font-weight: bold;
+            line-break: loose;
+        }
+    }
+
+    .dropdown-menu li:nth-child(1) {
+        animation: slide ease-in-out 0.2s forwards;
+        animation-delay: 0s;
+    }
+
+    .dropdown-menu li:nth-child(3) {
+        animation: slide ease-in-out 0.2s forwards;
+        animation-delay: 0.1s;
+    }
+
+    .dropdown-menu li:nth-child(5) {
+        animation: slide ease-in-out 0.2s forwards;
+        animation-delay: 0.2s;
+    }
+
+    .dropdown-menu li:nth-child(7) {
+        animation: slide ease-in-out 0.2s forwards;
+        animation-delay: 0.3s;
+    }
+
+    @keyframes slide {
+        from {
+            transform: translateX(40px);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+</style>
+<div id="nav-container">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a style="font-weight: bold; color: var(--text-700); display: flex; align-items: center;"
+               class="navbar-brand" href="{% url 'home' %}">
+                <span class="position-absolute" id="nav-logo" style=" height: 80px; width: 80px; transform: rotateZ(90deg); background-image: url('{% static 'logo/orionLogoV3W.png' %}'); background-size: cover;"></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                    aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <i><span class="navbar-toggler-icon"></span></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3 gap-lg-5">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                           aria-expanded="false">
+                            Web
+                        </a>
+                        <ul class="dropdown-menu justify-content-center pe-5">
+                            <li>
+                                <a href="{% url 'corporation' %}">
+                                <span><svg width="30px" height="30px" viewBox="0 0 24 24" fill="none"
+                                           xmlns="http://www.w3.org/2000/svg" stroke="#e67019"><g id="SVGRepo_bgCarrier"
+                                                                                                  stroke-width="0"></g><g
+                                        id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke="#e67019" stroke-width="0.048"></g><g id="SVGRepo_iconCarrier"> <path
+                                        d="M20.2236 12.5257C19.6384 9.40452 19.3458 7.84393 18.2349 6.92196C17.124 6 15.5362 6 12.3606 6H11.6394C8.46386 6 6.87608 6 5.76518 6.92196C4.65428 7.84393 4.36167 9.40452 3.77645 12.5257C2.95353 16.9146 2.54207 19.1091 3.74169 20.5545C4.94131 22 7.17402 22 11.6394 22H12.3606C16.826 22 19.0587 22 20.2584 20.5545C20.9543 19.7159 21.108 18.6252 20.9537 17"
+                                        stroke="#e67019" stroke-width="1.2" stroke-linecap="round"></path> <path
+                                        d="M9 6V5C9 3.34315 10.3431 2 12 2C13.6569 2 15 3.34315 15 5V6" stroke="#e67019"
+                                        stroke-width="1.2" stroke-linecap="round"></path> </g></svg></span>
+                                    <span>Kurumsal Web Sitesi</span><br>
+                                    <span class="fw-light">Firma ve İşletme Sahipleri</span>
+                                </a>
+                            </li>
+                            <hr>
+                            <li>
+                                <a href="{% url 'ecom' %}">
+                                    <span><svg width="30px" height="30px" viewBox="0 0 24 24" fill="none"
+                                               xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier"
+                                                                                     stroke-width="0"></g><g
+                                            id="SVGRepo_tracerCarrier" stroke-linecap="round"
+                                            stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path
+                                            d="M21.9844 10C21.9473 8.68893 21.8226 7.85305 21.4026 7.13974C20.8052 6.12523 19.7294 5.56066 17.5777 4.43152L15.5777 3.38197C13.8221 2.46066 12.9443 2 12 2C11.0557 2 10.1779 2.46066 8.42229 3.38197L6.42229 4.43152C4.27063 5.56066 3.19479 6.12523 2.5974 7.13974C2 8.15425 2 9.41667 2 11.9415V12.0585C2 14.5833 2 15.8458 2.5974 16.8603C3.19479 17.8748 4.27063 18.4393 6.42229 19.5685L8.42229 20.618C10.1779 21.5393 11.0557 22 12 22C12.9443 22 13.8221 21.5393 15.5777 20.618L17.5777 19.5685C19.7294 18.4393 20.8052 17.8748 21.4026 16.8603C21.8226 16.1469 21.9473 15.3111 21.9844 14"
+                                            stroke="#e67019" stroke-width="1.2" stroke-linecap="round"></path> <path
+                                            d="M21 7.5L12 12M12 12L3 7.5M12 12V21.5" stroke="#e67019" stroke-width="1.2"
+                                            stroke-linecap="round"></path> </g></svg></span>
+                                    <span>E-Ticaret Sitesi</span><br>
+                                    <span class="fw-light">Ürün Satışı</span>
+                                </a>
+                            </li>
+                            <hr>
+                            <li>
+                                <a href="{% url 'personal' %}">
+                                    <span><svg width="30px" height="30px" viewBox="0 0 24 24" fill="none"
+                                               xmlns="http://www.w3.org/2000/svg" stroke="#e67019" stroke-width="1.2"><g
+                                            id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier"
+                                                                                           stroke-linecap="round"
+                                                                                           stroke-linejoin="round"></g><g
+                                            id="SVGRepo_iconCarrier"> <path
+                                            d="M8 13H16C17.7107 13 19.1506 14.2804 19.3505 15.9795L20 21.5M8 13C5.2421 12.3871 3.06717 10.2687 2.38197 7.52787L2 6M8 13V18C8 19.8856 8 20.8284 8.58579 21.4142C9.17157 22 10.1144 22 12 22C13.8856 22 14.8284 22 15.4142 21.4142C16 20.8284 16 19.8856 16 18V17"
+                                            stroke="#<svg width= 64px" height="64px" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier"
+                                                                                  stroke-width="0"></g><g
+                                            id="SVGRepo_tracerCarrier" stroke-linecap="round"
+                                            stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path
+                                            d="M21.9844 10C21.9473 8.68893 21.8226 7.85305 21.4026 7.13974C20.8052 6.12523 19.7294 5.56066 17.5777 4.43152L15.5777 3.38197C13.8221 2.46066 12.9443 2 12 2C11.0557 2 10.1779 2.46066 8.42229 3.38197L6.42229 4.43152C4.27063 5.56066 3.19479 6.12523 2.5974 7.13974C2 8.15425 2 9.41667 2 11.9415V12.0585C2 14.5833 2 15.8458 2.5974 16.8603C3.19479 17.8748 4.27063 18.4393 6.42229 19.5685L8.42229 20.618C10.1779 21.5393 11.0557 22 12 22C12.9443 22 13.8221 21.5393 15.5777 20.618L17.5777 19.5685C19.7294 18.4393 20.8052 17.8748 21.4026 16.8603C21.8226 16.1469 21.9473 15.3111 21.9844 14"
+                                            stroke="#e67019" stroke-width="1.2" stroke-linecap="round"></path> <path
+                                            d="M21 7.5L12 12M12 12L3 7.5M12 12V21.5" stroke="#e67019" stroke-width="1.2"
+                                            stroke-linecap="round"></path> </g>" stroke-width="1.5" stroke-linecap="round"&gt;</path> <circle
+                                            cx="12" cy="6" r="4" stroke="#<svg width= 64px" height="64px"
+                                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g
+                                            id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier"
+                                                                                           stroke-linecap="round"
+                                                                                           stroke-linejoin="round"></g><g
+                                            id="SVGRepo_iconCarrier"> <path
+                                            d="M21.9844 10C21.9473 8.68893 21.8226 7.85305 21.4026 7.13974C20.8052 6.12523 19.7294 5.56066 17.5777 4.43152L15.5777 3.38197C13.8221 2.46066 12.9443 2 12 2C11.0557 2 10.1779 2.46066 8.42229 3.38197L6.42229 4.43152C4.27063 5.56066 3.19479 6.12523 2.5974 7.13974C2 8.15425 2 9.41667 2 11.9415V12.0585C2 14.5833 2 15.8458 2.5974 16.8603C3.19479 17.8748 4.27063 18.4393 6.42229 19.5685L8.42229 20.618C10.1779 21.5393 11.0557 22 12 22C12.9443 22 13.8221 21.5393 15.5777 20.618L17.5777 19.5685C19.7294 18.4393 20.8052 17.8748 21.4026 16.8603C21.8226 16.1469 21.9473 15.3111 21.9844 14"
+                                            stroke="#e67019" stroke-width="1.2" stroke-linecap="round"></path> <path
+                                            d="M21 7.5L12 12M12 12L3 7.5M12 12V21.5" stroke="#e67019" stroke-width="1.2"
+                                            stroke-linecap="round"></path> </g>" stroke-width="1.5"&gt;</circle> </g></svg></span>
+                                    <span>Kişisel Portfolyö Sitesi</span><br>
+                                    <span class="fw-light">CV, Resume</span>
+                                </a>
+                            </li>
+                            <hr>
+                            <li>
+                                <a href="{% url 'single-page' %}">
+                                    <span><svg width="30px" height="30px" viewBox="0 0 24 24" fill="none"
+                                               xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier"
+                                                                                     stroke-width="0"></g><g
+                                            id="SVGRepo_tracerCarrier" stroke-linecap="round"
+                                            stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path
+                                            d="M3 14V10C3 6.22876 3 4.34315 4.17157 3.17157C5.34315 2 7.22876 2 11 2H13C16.7712 2 18.6569 2 19.8284 3.17157C20.4816 3.82476 20.7706 4.69989 20.8985 6M21 10V14C21 17.7712 21 19.6569 19.8284 20.8284C18.6569 22 16.7712 22 13 22H11C7.22876 22 5.34315 22 4.17157 20.8284C3.51839 20.1752 3.22937 19.3001 3.10149 18"
+                                            stroke="#e67019" stroke-width="1.2" stroke-linecap="round"></path> <path
+                                            d="M8 14H13" stroke="#e67019" stroke-width="1.2"
+                                            stroke-linecap="round"></path> <path d="M8 10H9M16 10H12" stroke="#e67019"
+                                                                                 stroke-width="1.2"
+                                                                                 stroke-linecap="round"></path> </g></svg></span>
+                                    <span>Tek Sayfalık Web Sitesi</span><br>
+                                    <span class="fw-light">Yeni Firmalar</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-current="page" href="#">Portfolyo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'about-us' %}">Hakkımızda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bolder border-bottom border-start rounded" href="{% url 'request' %}">Talep
+                            Formu</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var url = window.location;
+        $('ul.nav a[href="' + url + '"]').parent().addClass('active');
+        $('ul.nav a').filter(function () {
+            return this.href == url;
+        }).parent().addClass('active');
+    });
+</script>

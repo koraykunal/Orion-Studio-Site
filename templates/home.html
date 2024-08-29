@@ -1,0 +1,419 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Orion Studio - Create your website - Koray Kunal - Rüya Ticaret">
+    <title>Main</title>
+    {% block style %}
+        <link rel="stylesheet" href="{% static 'css/base-template.css' %}">
+        <link rel="stylesheet" href="{% static 'css/home.css' %}">
+        <link rel="stylesheet" href="{% static 'css/3rd/aos.css' %}"/>
+    {% endblock %}
+</head>
+<body>
+{% block content %}
+    <main id="content">
+        <section class="d-flex justify-content-around flex-column"
+                 id="introduction-section">
+            <div class="container d-flex justify-content-center flex-column gap-5">
+                <div class="d-flex flex-column justify-content-evenly">
+                    <div class="d-flex align-items-center align-items-lg-center justify-content-center flex-column gap-2 gap-xxl-3 w-100"
+                         id="introduction-header-container">
+                        <h1 class="gradient-text">Orion Studio, Dijital Dönüşümde Yanınızda</h1>
+                        <h4 class="gradient-text">Dijital dönüşümünüzü hızlandırıyor ve benzersiz web çözümlerimizle çevrimiçi varlığınızı güçlendiriyoruz.</h4>
+                        <a href="{% url 'request' %}" class="btn btn-ghost">Hemen Başla<i
+                                class="fa fa-chevron-right ms-2"></i></a>
+                    </div>
+                        {% include 'common/loader.html' %}
+                        <canvas class="align-self-center" id="threejs-canvas"></canvas>
+                </div>
+            </div>
+        </section>
+        <section class="d-flex" id="services-section">
+            <div class="container d-flex justify-content-center flex-column">
+                <h1 class="text-center fw-light mb-5">Neye ihtiyacınız var?</h1>
+                <div class="d-flex justify-content-center align-items-start flex-column flex-md-row gap-5" id="cards">
+                    <div class="d-flex card">
+                        <h2>Web</h2>
+                        <ul class="d-flex gap-1 flex-column list-unstyled">
+                            <li>
+                                <a href="{% url 'corporation' %}">
+                                <span><svg width="30px" height="30px" viewBox="0 0 24 24" fill="none"
+                                           xmlns="http://www.w3.org/2000/svg" stroke="#e67019"><g id="SVGRepo_bgCarrier"
+                                                                                                  stroke-width="0"></g><g
+                                        id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke="#e67019" stroke-width="0.048"></g><g id="SVGRepo_iconCarrier"> <path
+                                        d="M20.2236 12.5257C19.6384 9.40452 19.3458 7.84393 18.2349 6.92196C17.124 6 15.5362 6 12.3606 6H11.6394C8.46386 6 6.87608 6 5.76518 6.92196C4.65428 7.84393 4.36167 9.40452 3.77645 12.5257C2.95353 16.9146 2.54207 19.1091 3.74169 20.5545C4.94131 22 7.17402 22 11.6394 22H12.3606C16.826 22 19.0587 22 20.2584 20.5545C20.9543 19.7159 21.108 18.6252 20.9537 17"
+                                        stroke="#e67019" stroke-width="1.2" stroke-linecap="round"></path> <path
+                                        d="M9 6V5C9 3.34315 10.3431 2 12 2C13.6569 2 15 3.34315 15 5V6" stroke="#e67019"
+                                        stroke-width="1.2" stroke-linecap="round"></path> </g></svg></span>
+                                    <span>Kurumsal Web Sitesi</span>
+                                </a>
+                            </li>
+                            <hr>
+                            <li>
+                                <a href="{% url 'ecom' %}">
+                                    <span><svg width="30px" height="30px" viewBox="0 0 24 24" fill="none"
+                                               xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier"
+                                                                                     stroke-width="0"></g><g
+                                            id="SVGRepo_tracerCarrier" stroke-linecap="round"
+                                            stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path
+                                            d="M21.9844 10C21.9473 8.68893 21.8226 7.85305 21.4026 7.13974C20.8052 6.12523 19.7294 5.56066 17.5777 4.43152L15.5777 3.38197C13.8221 2.46066 12.9443 2 12 2C11.0557 2 10.1779 2.46066 8.42229 3.38197L6.42229 4.43152C4.27063 5.56066 3.19479 6.12523 2.5974 7.13974C2 8.15425 2 9.41667 2 11.9415V12.0585C2 14.5833 2 15.8458 2.5974 16.8603C3.19479 17.8748 4.27063 18.4393 6.42229 19.5685L8.42229 20.618C10.1779 21.5393 11.0557 22 12 22C12.9443 22 13.8221 21.5393 15.5777 20.618L17.5777 19.5685C19.7294 18.4393 20.8052 17.8748 21.4026 16.8603C21.8226 16.1469 21.9473 15.3111 21.9844 14"
+                                            stroke="#e67019" stroke-width="1.2" stroke-linecap="round"></path> <path
+                                            d="M21 7.5L12 12M12 12L3 7.5M12 12V21.5" stroke="#e67019" stroke-width="1.2"
+                                            stroke-linecap="round"></path> </g></svg></span>
+                                    <span>E-Ticaret Sitesi</span>
+                                </a>
+                            </li>
+                            <hr>
+                            <li>
+                                <a href="{% url 'personal' %}">
+                                    <span><svg width="30px" height="30px" viewBox="0 0 24 24" fill="none"
+                                               xmlns="http://www.w3.org/2000/svg" stroke="#e67019" stroke-width="1.2"><g
+                                            id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier"
+                                                                                           stroke-linecap="round"
+                                                                                           stroke-linejoin="round"></g><g
+                                            id="SVGRepo_iconCarrier"> <path
+                                            d="M8 13H16C17.7107 13 19.1506 14.2804 19.3505 15.9795L20 21.5M8 13C5.2421 12.3871 3.06717 10.2687 2.38197 7.52787L2 6M8 13V18C8 19.8856 8 20.8284 8.58579 21.4142C9.17157 22 10.1144 22 12 22C13.8856 22 14.8284 22 15.4142 21.4142C16 20.8284 16 19.8856 16 18V17"
+                                            stroke="#<svg width= 64px" height="64px" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier"
+                                                                                  stroke-width="0"></g><g
+                                            id="SVGRepo_tracerCarrier" stroke-linecap="round"
+                                            stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path
+                                            d="M21.9844 10C21.9473 8.68893 21.8226 7.85305 21.4026 7.13974C20.8052 6.12523 19.7294 5.56066 17.5777 4.43152L15.5777 3.38197C13.8221 2.46066 12.9443 2 12 2C11.0557 2 10.1779 2.46066 8.42229 3.38197L6.42229 4.43152C4.27063 5.56066 3.19479 6.12523 2.5974 7.13974C2 8.15425 2 9.41667 2 11.9415V12.0585C2 14.5833 2 15.8458 2.5974 16.8603C3.19479 17.8748 4.27063 18.4393 6.42229 19.5685L8.42229 20.618C10.1779 21.5393 11.0557 22 12 22C12.9443 22 13.8221 21.5393 15.5777 20.618L17.5777 19.5685C19.7294 18.4393 20.8052 17.8748 21.4026 16.8603C21.8226 16.1469 21.9473 15.3111 21.9844 14"
+                                            stroke="#e67019" stroke-width="1.2" stroke-linecap="round"></path> <path
+                                            d="M21 7.5L12 12M12 12L3 7.5M12 12V21.5" stroke="#e67019" stroke-width="1.2"
+                                            stroke-linecap="round"></path> </g>" stroke-width="1.5" stroke-linecap="round"&gt;</path> <circle
+                                            cx="12" cy="6" r="4" stroke="#<svg width= 64px" height="64px"
+                                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g
+                                            id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier"
+                                                                                           stroke-linecap="round"
+                                                                                           stroke-linejoin="round"></g><g
+                                            id="SVGRepo_iconCarrier"> <path
+                                            d="M21.9844 10C21.9473 8.68893 21.8226 7.85305 21.4026 7.13974C20.8052 6.12523 19.7294 5.56066 17.5777 4.43152L15.5777 3.38197C13.8221 2.46066 12.9443 2 12 2C11.0557 2 10.1779 2.46066 8.42229 3.38197L6.42229 4.43152C4.27063 5.56066 3.19479 6.12523 2.5974 7.13974C2 8.15425 2 9.41667 2 11.9415V12.0585C2 14.5833 2 15.8458 2.5974 16.8603C3.19479 17.8748 4.27063 18.4393 6.42229 19.5685L8.42229 20.618C10.1779 21.5393 11.0557 22 12 22C12.9443 22 13.8221 21.5393 15.5777 20.618L17.5777 19.5685C19.7294 18.4393 20.8052 17.8748 21.4026 16.8603C21.8226 16.1469 21.9473 15.3111 21.9844 14"
+                                            stroke="#e67019" stroke-width="1.2" stroke-linecap="round"></path> <path
+                                            d="M21 7.5L12 12M12 12L3 7.5M12 12V21.5" stroke="#e67019" stroke-width="1.2"
+                                            stroke-linecap="round"></path> </g>" stroke-width="1.5"&gt;</circle> </g></svg></span>
+                                    <span>Kişisel Portfolyö Sitesi</span>
+                                </a>
+                            </li>
+                            <hr>
+                            <li>
+                                <a href="{% url 'single-page' %}">
+                                    <span><svg width="30px" height="30px" viewBox="0 0 24 24" fill="none"
+                                               xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier"
+                                                                                     stroke-width="0"></g><g
+                                            id="SVGRepo_tracerCarrier" stroke-linecap="round"
+                                            stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path
+                                            d="M3 14V10C3 6.22876 3 4.34315 4.17157 3.17157C5.34315 2 7.22876 2 11 2H13C16.7712 2 18.6569 2 19.8284 3.17157C20.4816 3.82476 20.7706 4.69989 20.8985 6M21 10V14C21 17.7712 21 19.6569 19.8284 20.8284C18.6569 22 16.7712 22 13 22H11C7.22876 22 5.34315 22 4.17157 20.8284C3.51839 20.1752 3.22937 19.3001 3.10149 18"
+                                            stroke="#e67019" stroke-width="1.2" stroke-linecap="round"></path> <path
+                                            d="M8 14H13" stroke="#e67019" stroke-width="1.2"
+                                            stroke-linecap="round"></path> <path d="M8 10H9M16 10H12" stroke="#e67019"
+                                                                                 stroke-width="1.2"
+                                                                                 stroke-linecap="round"></path> </g></svg></span>
+                                    <span>Tek Sayfalık Web Sitesi</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="d-flex card gap-5">
+                        <h2>Dizayn</h2>
+                        <ul class="d-flex gap-1 flex-column list-unstyled">
+                            <li>
+                                <a href="{% url 'request' %}">
+                                    <span><svg width="30px" height="30px" viewBox="0 0 24 24" fill="none"
+                                               xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier"
+                                                                                     stroke-width="0"></g><g
+                                            id="SVGRepo_tracerCarrier" stroke-linecap="round"
+                                            stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path
+                                            d="M15.2683 18.2287C13.2889 20.9067 12.2992 22.2458 11.3758 21.9628C10.4525 21.6798 10.4525 20.0375 10.4525 16.7528L10.4526 16.4433C10.4526 15.2585 10.4526 14.6662 10.074 14.2946L10.054 14.2754C9.6673 13.9117 9.05079 13.9117 7.81775 13.9117C5.59888 13.9117 4.48945 13.9117 4.1145 13.2387C4.10829 13.2276 4.10225 13.2164 4.09639 13.205C3.74244 12.5217 4.3848 11.6526 5.66953 9.91436L8.73167 5.77133C10.711 3.09327 11.7007 1.75425 12.6241 2.03721C13.5474 2.32018 13.5474 3.96249 13.5474 7.24712V7.55682C13.5474 8.74151 13.5474 9.33386 13.926 9.70541L13.946 9.72466C14.3327 10.0884 14.9492 10.0884 16.1822 10.0884C18.4011 10.0884 19.5106 10.0884 19.8855 10.7613C19.8917 10.7724 19.8977 10.7837 19.9036 10.795C20.2576 11.4784 19.6152 12.3475 18.3304 14.0857"
+                                            stroke="#a328d7" stroke-width="1.2"
+                                            stroke-linecap="round"></path> </g></svg></span>
+                                    <span>Logo Tasarımı</span>
+                                </a>
+                            </li>
+                            <hr>
+                            <li>
+                                <a href="{% url 'request' %}">
+                                    <span><svg width="30px" height="30px" viewBox="0 0 24 24" fill="none"
+                                               xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier"
+                                                                                     stroke-width="0"></g><g
+                                            id="SVGRepo_tracerCarrier" stroke-linecap="round"
+                                            stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path
+                                            d="M5.5 15.5C5.5 14.5572 5.5 14.0858 5.79289 13.7929C6.08579 13.5 6.55719 13.5 7.5 13.5H8.5C9.44281 13.5 9.91421 13.5 10.2071 13.7929C10.5 14.0858 10.5 14.5572 10.5 15.5V16.5C10.5 17.4428 10.5 17.9142 10.2071 18.2071C9.91421 18.5 9.44281 18.5 8.5 18.5C7.08579 18.5 6.37868 18.5 5.93934 18.0607"
+                                            stroke="#a328d7" stroke-width="1.2" stroke-linecap="round"></path> <path
+                                            d="M5.5 8.5C5.5 7.08579 5.5 6.37868 5.93934 5.93934C6.37868 5.5 7.08579 5.5 8.5 5.5C9.44281 5.5 9.91421 5.5 10.2071 5.79289C10.5 6.08579 10.5 6.55719 10.5 7.5V8.5C10.5 9.44281 10.5 9.91421 10.2071 10.2071C9.91421 10.5 9.44281 10.5 8.5 10.5H7.5C6.55719 10.5 6.08579 10.5 5.79289 10.2071C5.5 9.91421 5.5 9.44281 5.5 8.5Z"
+                                            stroke="#a328d7" stroke-width="1.2"></path> <path
+                                            d="M13.5 15.5C13.5 14.5572 13.5 14.0858 13.7929 13.7929C14.0858 13.5 14.5572 13.5 15.5 13.5H16.5C17.4428 13.5 17.9142 13.5 18.2071 13.7929C18.5 14.0858 18.5 14.5572 18.5 15.5C18.5 16.9142 18.5 17.6213 18.0607 18.0607C17.6213 18.5 16.9142 18.5 15.5 18.5C14.5572 18.5 14.0858 18.5 13.7929 18.2071C13.5 17.9142 13.5 17.4428 13.5 16.5V15.5Z"
+                                            stroke="#a328d7" stroke-width="1.2"></path> <path
+                                            d="M18.5 8.5C18.5 9.44281 18.5 9.91421 18.2071 10.2071C17.9142 10.5 17.4428 10.5 16.5 10.5H15.5C14.5572 10.5 14.0858 10.5 13.7929 10.2071C13.5 9.91421 13.5 9.44281 13.5 8.5V7.5C13.5 6.55719 13.5 6.08579 13.7929 5.79289C14.0858 5.5 14.5572 5.5 15.5 5.5C16.9142 5.5 17.6213 5.5 18.0607 5.93934"
+                                            stroke="#a328d7" stroke-width="1.2" stroke-linecap="round"></path> <path
+                                            d="M22 14C22 14.3492 22 14.6822 21.9991 15M14 22C17.7712 22 19.6569 22 20.8284 20.8284C21.4816 20.1752 21.7706 19.3001 21.8985 18"
+                                            stroke="#a328d7" stroke-width="1.2" stroke-linecap="round"></path> <path
+                                            d="M10 22C6.22876 22 4.34315 22 3.17157 20.8284C2 19.6569 2 17.7712 2 14"
+                                            stroke="#a328d7" stroke-width="1.2" stroke-linecap="round"></path> <path
+                                            d="M10 2C6.22876 2 4.34315 2 3.17157 3.17157C2.51839 3.82475 2.22937 4.69989 2.10149 6M2 10C2 9.65081 2 9.31779 2.00093 9"
+                                            stroke="#a328d7" stroke-width="1.2" stroke-linecap="round"></path> <path
+                                            d="M14 2C17.7712 2 19.6569 2 20.8284 3.17157C22 4.34315 22 6.22876 22 10"
+                                            stroke="#a328d7" stroke-width="1.2"
+                                            stroke-linecap="round"></path> </g></svg></span>
+                                    <span>Broşür, Afiş Tasarımları</span>
+                                </a>
+                            </li>
+                            <hr>
+                            <li>
+                                <a href="{% url 'request' %}">
+                                    <span><svg width="30px" height="30px" viewBox="0 0 24 24" fill="none"
+                                               xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier"
+                                                                                     stroke-width="0"></g><g
+                                            id="SVGRepo_tracerCarrier" stroke-linecap="round"
+                                            stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path
+                                            d="M11 7L8 17" stroke="#a328d7" stroke-width="1.2" stroke-linecap="round"
+                                            stroke-linejoin="round"></path> <path d="M16 7L13 17" stroke="#a328d7"
+                                                                                  stroke-width="1.2"
+                                                                                  stroke-linecap="round"
+                                                                                  stroke-linejoin="round"></path> <path
+                                            d="M18 10H7" stroke="#a328d7" stroke-width="1.2" stroke-linecap="round"
+                                            stroke-linejoin="round"></path> <path d="M17 14H6" stroke="#a328d7"
+                                                                                  stroke-width="1.2"
+                                                                                  stroke-linecap="round"
+                                                                                  stroke-linejoin="round"></path> <path
+                                            d="M22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C21.5093 4.43821 21.8356 5.80655 21.9449 8"
+                                            stroke="#a328d7" stroke-width="1.2"
+                                            stroke-linecap="round"></path> </g></svg></span>
+                                    <span>Sosyal Medya Şablonları</span>
+                                </a>
+                            </li>
+                            <hr>
+                            <li>
+                                <a href="{% url 'request' %}">
+                                    <span><svg width="30px" height="30px" viewBox="0 0 24 24" fill="none"
+                                               xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier"
+                                                                                     stroke-width="0"></g><g
+                                            id="SVGRepo_tracerCarrier" stroke-linecap="round"
+                                            stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path
+                                            d="M21.1935 16.793C20.8437 19.2739 20.6689 20.5143 19.7717 21.2572C18.8745 22 17.5512 22 14.9046 22H9.09536C6.44881 22 5.12553 22 4.22834 21.2572C3.33115 20.5143 3.15626 19.2739 2.80648 16.793L2.38351 13.793C1.93748 10.6294 1.71447 9.04765 2.66232 8.02383C3.61017 7 5.29758 7 8.67239 7H15.3276C18.7024 7 20.3898 7 21.3377 8.02383C22.0865 8.83268 22.1045 9.98979 21.8592 12"
+                                            stroke="#a328d7" stroke-width="1.2" stroke-linecap="round"></path> <path
+                                            d="M19.5617 7C19.7904 5.69523 18.7863 4.5 17.4617 4.5H6.53788C5.21323 4.5 4.20922 5.69523 4.43784 7"
+                                            stroke="#a328d7" stroke-width="1.2"></path> <path
+                                            d="M17.4999 4.5C17.5283 4.24092 17.5425 4.11135 17.5427 4.00435C17.545 2.98072 16.7739 2.12064 15.7561 2.01142C15.6497 2 15.5194 2 15.2588 2H8.74099C8.48035 2 8.35002 2 8.24362 2.01142C7.22584 2.12064 6.45481 2.98072 6.45704 4.00434C6.45727 4.11135 6.47146 4.2409 6.49983 4.5"
+                                            stroke="#a328d7" stroke-width="1.2"></path> <circle cx="16.5" cy="11.5"
+                                                                                                r="1.5" stroke="#a328d7"
+                                                                                                stroke-width="1.2"></circle> <path
+                                            d="M19.9999 20L17.1157 17.8514C16.1856 17.1586 14.8004 17.0896 13.7766 17.6851L13.5098 17.8403C12.7984 18.2542 11.8304 18.1848 11.2156 17.6758L7.37738 14.4989C6.6113 13.8648 5.38245 13.8309 4.5671 14.4214L3.24316 15.3803"
+                                            stroke="#a328d7" stroke-width="1.2"
+                                            stroke-linecap="round"></path> </g></svg></span>
+                                    <span>Web İllüstrasyonları</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="promotion" class="d-flex justify-content-center gap-5">
+            <div class="d-flex flex-column overflow-x-hidden w-75">
+                <h1 class="text-center fw-light mb-5">Neden Orion Studio?</h1>
+                <div class="d-flex flex-column gap-5 w-100">
+                    <div class="d-flex card border" data-aos="slide-right" data-aos-easing="ease-in-out">
+                        <h3 class="card-header-tabs">Size Özel Yaklaşım</h3>
+                        <div class="d-flex flex-column flex-md-row justify-content-around card-body">
+                            <h4 class="card-text align-self-center w-50">Her işletme benzersizdir ve sizin de benzersiz
+                                ihtiyaçlarınız var. Biz, sizin işinizi, hedeflerinizi ve vizyonunuzu anlamak için size
+                                özel bir yaklaşım benimseriz.</h4>
+                            <div class="align-self-center align-self-lg-end">
+                                <lottie-player
+                                        src="https://lottie.host/d7e0e8a5-dbfa-43a2-94d5-bfb517968b95/37ePvNLzVF.json"
+                                        background="transparent"
+                                        speed="1" loop autoplay
+                                        direction="1"
+                                        mode="bounce"></lottie-player>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-self-end card" data-aos="slide-left">
+                        <h3 class="card-header-tabs">Tecrübe ve Tutku</h3>
+                        <div class="d-flex flex-column flex-md-row justify-content-around card-body">
+                            <h4 class="card-text align-self-center w-50">Web tasarımı ve dijital pazarlama konusunda
+                                tutkulu ve deneyimli bir ekibiz. İşinizi seviyoruz ve başarınız için elimizden gelenin
+                                en iyisini yapmaya hazırız.</h4>
+                            <div class="align-self-center align-self-lg-end p-3">
+                                <lottie-player
+                                        src="https://lottie.host/f89cb95b-3f7a-41f6-8889-ca232ac0a2ca/M8F8GitLlQ.json"
+                                        background="transparent"
+                                        speed="1" loop autoplay
+                                        direction="1"
+                                        mode="bounce"></lottie-player>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex card" data-aos="slide-right">
+                        <h3 class="card-header-tabs">Sonsuz Destek ve Yardım</h3>
+                        <div class="d-flex flex-column flex-md-row justify-content-around card-body">
+                            <h4 class="card-text align-self-center w-50">Sorularınızı yanıtlamak ve ihtiyaçlarınıza
+                                hızlıca yanıt vermek için buradayız. Size sürekli destek sağlamak için elimizden gelenin
+                                en iyisini yaparız.</h4>
+                            <div class="align-self-center align-self-lg-end">
+                                <lottie-player
+                                        src="https://lottie.host/7f81b41e-2333-4ba1-ae50-6f72c2f90eb6/INaR163oel.json"
+                                        background="transparent"
+                                        speed="1" loop autoplay
+                                        direction="1"
+                                        mode="bounce"></lottie-player>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-self-end card" data-aos="slide-left">
+                        <h3 class="card-header-tabs">% 100 Sahiplilik ile Kontrol ve Yönetim</h3>
+                        <div class="d-flex flex-column flex-md-row justify-content-around card-body">
+                            <h4 class="card-text align-self-center w-50">Size özel olarak hazırladığımız web site
+                                düzenleme eğitim
+                                videomuz
+                                sayesinde, web sitenizi dilediğiniz zaman istediğiniz şekilde kolayca düzenleyebilir,
+                                güncelleyebilir veya değiştirebilirsiniz.</h4>
+                            <div class="align-self-center align-self-lg-end">
+                                <lottie-player
+                                        src="https://lottie.host/76b1a3cc-84f2-4850-affa-6d458a319287/WZYUwIZIju.json"
+                                        background="transparent"
+                                        speed="1" loop autoplay
+                                        direction="1"
+                                        mode="bounce"></lottie-player>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {#        <section class="d-flex align-items-center justify-content-around flex-column">#}
+        {#            <div>#}
+        {#                <h1 class="text-center fw-light my-5">Örnek Çalışmalarımız</h1>#}
+        {#                <div id="portfolio-container" class="d-flex justify-content-center flex-wrap gap-5">#}
+        {#                    <div class="box"></div>#}
+        {#                    <div class="box"></div>#}
+        {#                    <div class="box"></div>#}
+        {#                    <div class="box"></div>#}
+        {#                    <div class="box"></div>#}
+        {#                    <div class="box"></div>#}
+        {#                    <div class="box"></div>#}
+        {#                    <div class="box"></div>#}
+        {#                    <div class="box"></div>#}
+        {#                    <div class="box"></div>#}
+        {#                    <div class="box"></div>#}
+        {#                    <div class="box"></div>#}
+        {#                </div>#}
+        {#            </div>#}
+        {#        </section>#}
+        <section id="pricing" class="d-flex align-items-center justify-content-center flex-column">
+            <div id="pricing-container">
+                <h1 class="text-center fw-light mb-5">Fiyatlandırma</h1>
+                <div class="d-flex justify-content-center flex-column flex-lg-row gap-5">
+                    <div style="background-color: var(--text);" class="card">
+                        <h3 class="align-self-center">Yazılım</h3>
+                        <h4 class="align-self-center">$1000 - $3000</h4>
+                        <ul class="d-flex flex-column gap-3 list-unstyled">
+                            <li>Özel UI/UX Dizayn</li>
+                            <li>Özel Yazılım Hizmeti</li>
+                            <li>Standart İçerik Yönetim Sistemi</li>
+                            <li>G-Analytics ve Search Console Entegrasyonları</li>
+                            <li>Kurumsal E-posta Hizmeti</li>
+                            <li>SEO Uyumlu</li>
+                            <li>Sıfırdan Wireframing + Figma Üzerinde UI/UX Tasarımı</li>
+                        </ul>
+                    </div>
+                    <div style="background-color: var(--text);" class="card">
+                        <h3 class="align-self-center">Dizayn</h3>
+                        <h4 class="align-self-center">$100 - $500</h4>
+                        <ul class="d-flex flex-column gap-3 list-unstyled">
+                            <li>Özel UI/UX Dizayn</li>
+                            <li>Logo ve Marka Kimliği Tasarımı</li>
+                            <li>Basılı ve Dijital Materyal Tasarımı</li>
+                            <li>Mobil Uygulama Arayüz Tasarımı</li>
+                            <li>Web Uygulama Arayüz Tasarımı</li>
+                            <li>Landing Page Tasarımı</li>
+                            <li>Wireframing ve Prototipleme Hizmeti</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-5">
+                    <h5>
+                        <span>&egsdot;&nbsp;Girişimci desteği kapsamında 25 yaşından küçük girişimcilere %15 indirim</span>
+                    </h5>
+                    <h5><span>&egsdot;&nbsp;Tasarımlarımızın hepsi müşterilerimize özel hazırlanmaktadır ve hazır şablon kullanılmamaktadır.</span>
+                    </h5>
+                </div>
+            </div>
+        </section>
+        <section class="d-flex align-items-center justify-content-center flex-column">
+            <div>
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <ul class="d-flex flex-column flex-lg-row align-items-center list-unstyled" id="tabs">
+                        <li class="tab active mw-100" id="tab1">
+                            <span><i class="fa-solid fa-feather"></i>&nbsp;İnternet Üzerinde Var Olmak</span>
+                        </li>
+                        <li class="tab mw-100" id="tab2">
+                            <span><i class="fa-solid fa-envelope"></i>&nbsp;Marka İmajınızı Yansıtma</span>
+                        </li>
+                        <li class="tab mw-100" id="tab3">
+                            <span><i class="fa-solid fa-stream"></i>&nbsp;Rekabet Üstünlüğü Sağlama</span>
+                        </li>
+                        <li class="tab mw-100" id="tab4">
+                            <span><i class="fa-solid fa-bar-chart"></i>&nbsp;Analiz ve İyileştirme</span>
+                        </li>
+                    </ul>
+
+                    <div class="align-self-center tab-contents">
+                        <div id="content1" class="tab-content active">
+                            <h4>Müşterilerinizin sizi bulması için internetin gücünden yararlanın. Bir web sitesi,
+                                işletmenizin dijital olarak var olmasını sağlar.</h4>
+                        </div>
+                        <div id="content2" class="tab-content">
+                            <h4>Web siteniz, markanızın kimliğini ve değerlerini yansıtan bir platform olabilir.
+                                Tasarım,
+                                renkler ve içerik aracılığıyla marka imajınızı güçlendirebilirsiniz.</h4>
+                        </div>
+                        <div id="content3" class="tab-content">
+                            <h4>Çoğu işletme artık bir web sitesine sahip olduğundan, rakiplerinizin gerisinde kalmamak
+                                için sizin de bir web sitesine ihtiyacınız var. Bu, rekabet avantajınızı korumanıza
+                                yardımcı olabilir.</h4>
+                        </div>
+                        <div id="content4" class="tab-content">
+                            <h4>Web siteniz, ziyaretçi analitiği araçlarıyla performansınızı izleyebilir ve sitenizi
+                                sürekli olarak iyileştirebilirsiniz. Bu, müşteri davranışlarını anlama ve
+                                stratejilerinizi optimize etme konusunda size değerli bilgiler sağlar.</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}
+</body>
+{% block scripts %}
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script type="module" src="{% static 'js/animations/circleAn.js' %}"></script>
+    <script src="{% static 'js/3rd_libs/aos.js' %}"></script>
+    <script>
+        AOS.init({disable: 'mobile'});
+    </script>
+    <script>
+        const tabs = document.querySelectorAll('.tab');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const tabId = tab.getAttribute('id').replace('tab', 'content');
+
+                tabs.forEach(tab => tab.classList.remove('active'));
+                tabContents.forEach(content => content.style.display = 'none');
+                tabContents.forEach(content => content.classList.remove('active'));
+
+                tab.classList.add('active');
+                document.getElementById(tabId).style.display = 'block';
+                document.getElementById(tabId).classList.add('active')
+            });
+        });
+    </script>
+{% endblock %}
+</html>

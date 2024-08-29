@@ -1,0 +1,402 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>E-commerce</title>
+    {% block style %}
+        <link rel="stylesheet" href="{% static 'css/base-template.css' %}">
+        <link rel="stylesheet" href="{% static 'css/services/ecommerce.css' %}">
+        <link rel="stylesheet" href="{% static 'css/3rd/aos.css' %}"/>
+    {% endblock %}
+</head>
+<body>
+{% block content %}
+    <main id="content">
+        <section class="d-flex align-items-center justify-content-around flex-column"
+                 id="introduction-section">
+            <div class="d-flex align-items-center flex-column gap-5">
+                <div class="d-flex align-items-center justify-content-around flex-column flex-md-row gap-5">
+                    <div class="d-flex align-items-center align-items-lg-start justify-content-center flex-column gap-2 gap-xxl-3"
+                         id="introduction-header-container">
+                        <h1>Profesyonel ve Yaratıcı E-Ticaret Web Site Yazılım ve Tasarımı</h1>
+                        <h4>Müşterilerinizi etkileyen, kullanıcı dostu ve satışlarınızı artıran özel tasarımlarla,
+                            ihtiyacınıza yönelik çözümlerle profesyonel web site yazılımı.</h4>
+                        <a href="{% url 'request' %}" class="btn btn-ghost">Hemen Başla<i
+                                class="fa fa-chevron-right ms-2"></i></a>
+                    </div>
+                    <div id="introduction-threejs-container" class="d-flex align-items-center justify-content-center">
+                        <dotlottie-player src="https://lottie.host/80203304-8278-4db9-8de0-51b24031111f/zazcN5qQol.json"
+                                          background="transparent" speed="1" style="width: auto; height: auto;" loop
+                                          autoplay></dotlottie-player>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="d-flex justify-content-center rounded-5">
+            <div class="d-flex flex-column justify-content-center gap-3">
+                <div class="d-flex align-items-center flex-column flex-lg-row">
+                    <dotlottie-player src="https://lottie.host/f875f06b-0c7e-4630-aa70-42550d793042/MSBAMFCV7W.json"
+                                      background="transparent" speed="1" style="width: auto; height: auto;" loop
+                                      autoplay></dotlottie-player>
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                        <h3>Küresel Erişim</h3>
+                        <h4>Bir e-ticaret sitesi, işletmenizin sınırlarını genişletir. Sadece fiziksel mağazanızda
+                            veya belirli bir coğrafi bölgede sınırlı kalmak yerine, internet üzerinden dünyanın her
+                            yerinden müşterilere erişebilirsiniz.</h4>
+                    </div>
+                </div>
+                <hr>
+                <div class="d-flex align-items-center flex-column flex-lg-row">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                        <h3>Düşük İşletme Maliyetleri</h3>
+                        <h4>Geleneksel bir mağaza açmak için gereken kiralar, depo maliyetleri ve personel
+                            masraflarından kaçınarak, e-ticaret işletmenizin maliyetlerini düşürebilirsiniz. Bu, kar
+                            marjınızı artırabilir.</h4>
+                    </div>
+                    <dotlottie-player src="https://lottie.host/7427f8e6-46ad-45c7-82f1-c7639829f820/KN3m98xkqy.json"
+                                      background="transparent" speed="1" style="width: auto; height: auto;" loop
+                                      autoplay></dotlottie-player>
+                </div>
+                <hr>
+                <div class="d-flex align-items-center flex-column flex-lg-row">
+                    <dotlottie-player
+                            src="https://lottie.host/47573588-9bfb-4666-ae3b-81223cf273fa/xgRgm8hMH7.json"
+                            background="transparent" speed="1" style="width: auto; height: auto;" loop
+                            autoplay></dotlottie-player>
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                        <h3>Veri Analitiği ve Müşteri Takibi</h3>
+                        <h4>Bir e-ticaret sitesi, müşterilerinizin alışveriş alışkanlıkları, tercihleri ve
+                            demografik bilgileri gibi değerli verileri toplamanızı sağlar. Bu verileri analiz ederek
+                            daha iyi hedefleme yapabilir ve müşteri memnuniyetini artırabilirsiniz.</h4>
+                    </div>
+                </div>
+                <hr>
+                <div class="d-flex align-items-center flex-column flex-lg-row">
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                        <h3>Rekabet Üstünlüğü</h3>
+                        <h4>Çevrimiçi alışveriş, gün geçtikçe daha popüler hale geliyor. Rakiplerinizin gerisinde
+                            kalmamak ve rekabet avantajı elde etmek için bir e-ticaret sitesine sahip olmanız
+                            önemlidir.</h4>
+                    </div>
+                    <dotlottie-player src="https://lottie.host/56484cd3-3d0c-40f7-a9bf-fdf44406d7bb/MbwhKoWuy1.json"
+                                      background="transparent" speed="1" style="width: auto; height: auto;" loop
+                                      autoplay></dotlottie-player>
+                </div>
+                <hr>
+                <div class="d-flex align-items-center flex-column flex-lg-row">
+                    <dotlottie-player src="https://lottie.host/5df25ea0-a380-427b-b9af-14ed31e9d691/e1yhaqulNB.json"
+                                      background="transparent" speed="1" style="width: auto; height: auto;" loop
+                                      autoplay></dotlottie-player>
+                    <div class="d-flex justify-content-center align-items-center flex-column">
+                        <h3>24/7 Açık Mağaza</h3>
+                        <h4>Bir e-ticaret sitesi, müşterilere günün her saatinde alışveriş yapma imkanı sunar. Bu,
+                            işletmenizin sürekli olarak gelir elde etmesini sağlar ve müşteri memnuniyetini
+                            artırır.</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="d-flex justify-content-center">
+            <div class="d-flex justify-content-center flex-column flex-lg-row flex-wrap gap-5 py-5">
+                <div class="box">
+                    <div data-aos="flip-right">
+                        <h2>12 Ay Garanti</h2>
+                        <h4>Yıllık yenilenebiilir kesintisiz destek garantisi ve bakım, güncelleme ve yedekleme
+                            hizmetleri.</h4>
+                    </div>
+                </div>
+                <div class="box">
+                    <div data-aos="flip-right" data-aos-delay="150">
+                        <h2>Modern Tasarım</h2>
+                        <h4>Modern ve estetik tasarımla dikkat çeken, türkiye ve dünyada nadir bulabileceğiniz kullanıcı
+                            dostu web siteleri.</h4>
+                    </div>
+                </div>
+                <div class="box">
+                    <div data-aos="flip-right" data-aos-delay="250">
+                        <h2>12 Ay Hosting ve Alan Adı</h2>
+                        <h4>Yıllık Yenilenebiilir sitenizin barındırılması ve alan adı kaydı ve yenilenmesi.</h4>
+                    </div>
+                </div>
+                <div class="box">
+                    <div data-aos="flip-right" data-aos-delay="350">
+                        <h2>SEO Uyumlu</h2>
+                        <h4>Kullanıcı deneyimi odaklı hizlı yüklenme ve SEO uyumlu Kodlama.</h4>
+                    </div>
+                </div>
+                <div class="box">
+                    <div data-aos="flip-right" data-aos-delay="450">
+                        <h2>Mobil Uyumlu Tasarım</h2>
+                        <h4>Tüm cihazlarda sorunsuz çalışan, kullanıcı dostu ve mobil uyumlu tasarım.</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="d-flex justify-content-center">
+            <div class="d-flex justify-content-center flex-column">
+                <h2 class="text-center mb-5">İstediğiniz Entegrasyon Orion Studio'da</h2>
+                <div>
+                    <div class="d-flex justify-content-center gap-5 flex-lg-row flex-wrap p-5">
+                        <div class="d-flex flex-column justify-content-center align-items-center">
+                            <img src="https://asset.brandfetch.io/idYpJMnlBx/iddHpgE8uS.png" alt="Google Analytics">
+                            <span class="fw-bold">Google Analytics</span>
+                        </div>
+                        <div class="d-flex flex-column justify-content-center align-items-center">
+                            <img src="https://cdn.brandfetch.io/idMouu3aXu/w/820/h/356/theme/dark/logo.png?k=ide4_jUx2k"
+                                 alt="İyzico">
+                            <span class="fw-bold">Iyzico</span>
+                        </div>
+                        <div class="d-flex flex-column justify-content-center align-items-center">
+                            <img src="https://cdn.brandfetch.io/iduBt3alPj/theme/dark/symbol.svg?k=ide4_jUx2k"
+                                 alt="Wordpress">
+                            <span class="fw-bold">Wordpress</span>
+                        </div>
+                        <div class="d-flex flex-column justify-content-center align-items-center">
+                            <img src="https://cdn.brandfetch.io/id5o3EIREg/w/800/h/601/theme/dark/symbol.png?k=ide4_jUx2k"
+                                 alt="Gmail">
+                            <span class="fw-bold">Gmail</span>
+                        </div>
+                        <div class="d-flex flex-column justify-content-center align-items-center">
+                            <img src="https://cdn.brandfetch.io/id4Ha8BARu/theme/dark/symbol.svg?k=ide4_jUx2k"
+                                 alt="Bootstrap">
+                            <span class="fw-bold">Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="d-flex justify-content-center">
+            <div class="d-flex flex-column justify-content-center align-items-center gap-5">
+                <h2 class="text-center">Kurumsal Web Sitesi Kimler İçindir?</h2>
+                <div class="d-flex flex-wrap justify-content-center gap-3">
+                    <div class="type-box border">
+                        <svg class="w-25 h-25" viewBox="0 0 63 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M63 31.4C63 14 48.9 -6.1633e-07 31.6 -1.37254e-06C14.2 -2.13312e-06 0.199981 14.1 0.19998 31.4C0.19998 48.7 14.3 62.8 31.6 62.8C48.9 62.8 63 48.8 63 31.4ZM13.4 41.1C13.4 31 21.6 22.9 31.6 22.9C41.6 22.9 49.8 31.1 49.8 41.1C49.8 51.2 41.6 59.3 31.6 59.3C21.6 59.3 13.4 51.2 13.4 41.1Z"
+                                  fill="currentColor"/>
+                            <path d="M63 31.4C63 14 48.9 -6.1633e-07 31.6 -1.37254e-06C14.2 -2.13312e-06 0.199981 14.1 0.19998 31.4C0.19998 48.7 14.3 62.8 31.6 62.8C48.9 62.8 63 48.8 63 31.4ZM13.4 41.1C13.4 31 21.6 22.9 31.6 22.9C41.6 22.9 49.8 31.1 49.8 41.1C49.8 51.2 41.6 59.3 31.6 59.3C21.6 59.3 13.4 51.2 13.4 41.1Z"
+                                  fill="currentColor" fill-opacity="0.2"/>
+                        </svg>
+                        <div>
+                            <h3>Kurumsal Tanıtım</h3>
+                            <p class="">Şirketinizi ve hizmetlerinizi etkili bir şekilde tanıtan temel bir kurumsal tanıtım web
+                                sitesi.</p>
+                        </div>
+                    </div>
+                    <div class="type-box border">
+                        <svg class="w-25 h-25" viewBox="0 0 63 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M63 31.4C63 14 48.9 -6.1633e-07 31.6 -1.37254e-06C14.2 -2.13312e-06 0.199981 14.1 0.19998 31.4C0.19998 48.7 14.3 62.8 31.6 62.8C48.9 62.8 63 48.8 63 31.4ZM13.4 41.1C13.4 31 21.6 22.9 31.6 22.9C41.6 22.9 49.8 31.1 49.8 41.1C49.8 51.2 41.6 59.3 31.6 59.3C21.6 59.3 13.4 51.2 13.4 41.1Z"
+                                  fill="currentColor"/>
+                            <path d="M63 31.4C63 14 48.9 -6.1633e-07 31.6 -1.37254e-06C14.2 -2.13312e-06 0.199981 14.1 0.19998 31.4C0.19998 48.7 14.3 62.8 31.6 62.8C48.9 62.8 63 48.8 63 31.4ZM13.4 41.1C13.4 31 21.6 22.9 31.6 22.9C41.6 22.9 49.8 31.1 49.8 41.1C49.8 51.2 41.6 59.3 31.6 59.3C21.6 59.3 13.4 51.2 13.4 41.1Z"
+                                  fill="currentColor" fill-opacity="0.2"/>
+                        </svg>
+                        <div>
+                            <h3>Ürün ve Hizmet Kataloğu</h3>
+                            <p>Şirketinizin özgünlüğünü ve yaratıcılığını vurgulayan, ürün ve hizmetlerinizi açıklayan,
+                                estetik ve bilgi dolu bir kurumsal web sitesi.</p>
+                        </div>
+                    </div>
+                    <div class="type-box border">
+                        <svg class="w-25 h-25" viewBox="0 0 63 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M63 31.4C63 14 48.9 -6.1633e-07 31.6 -1.37254e-06C14.2 -2.13312e-06 0.199981 14.1 0.19998 31.4C0.19998 48.7 14.3 62.8 31.6 62.8C48.9 62.8 63 48.8 63 31.4ZM13.4 41.1C13.4 31 21.6 22.9 31.6 22.9C41.6 22.9 49.8 31.1 49.8 41.1C49.8 51.2 41.6 59.3 31.6 59.3C21.6 59.3 13.4 51.2 13.4 41.1Z"
+                                  fill="currentColor"/>
+                            <path d="M63 31.4C63 14 48.9 -6.1633e-07 31.6 -1.37254e-06C14.2 -2.13312e-06 0.199981 14.1 0.19998 31.4C0.19998 48.7 14.3 62.8 31.6 62.8C48.9 62.8 63 48.8 63 31.4ZM13.4 41.1C13.4 31 21.6 22.9 31.6 22.9C41.6 22.9 49.8 31.1 49.8 41.1C49.8 51.2 41.6 59.3 31.6 59.3C21.6 59.3 13.4 51.2 13.4 41.1Z"
+                                  fill="currentColor" fill-opacity="0.2"/>
+                        </svg>
+                        <div>
+                            <h3>Blog Platformu</h3>
+                            <p>Sektörde güncel kalmak adına blog yazıları üzerine özelleşmiş web sitesi.</p>
+                        </div>
+                    </div>
+                    <div class="type-box border">
+                        <svg class="w-25 h-25" viewBox="0 0 63 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M63 31.4C63 14 48.9 -6.1633e-07 31.6 -1.37254e-06C14.2 -2.13312e-06 0.199981 14.1 0.19998 31.4C0.19998 48.7 14.3 62.8 31.6 62.8C48.9 62.8 63 48.8 63 31.4ZM13.4 41.1C13.4 31 21.6 22.9 31.6 22.9C41.6 22.9 49.8 31.1 49.8 41.1C49.8 51.2 41.6 59.3 31.6 59.3C21.6 59.3 13.4 51.2 13.4 41.1Z"
+                                  fill="currentColor"/>
+                            <path d="M63 31.4C63 14 48.9 -6.1633e-07 31.6 -1.37254e-06C14.2 -2.13312e-06 0.199981 14.1 0.19998 31.4C0.19998 48.7 14.3 62.8 31.6 62.8C48.9 62.8 63 48.8 63 31.4ZM13.4 41.1C13.4 31 21.6 22.9 31.6 22.9C41.6 22.9 49.8 31.1 49.8 41.1C49.8 51.2 41.6 59.3 31.6 59.3C21.6 59.3 13.4 51.2 13.4 41.1Z"
+                                  fill="currentColor" fill-opacity="0.2"/>
+                        </svg>
+                        <div>
+                            <h3>İş Fırsatları ve Kariyer Portalı</h3>
+                            <p>Şirketinizin iş fırsatlarını detaylıca paylaşan, şirket kültürünü yansıtan ve iş
+                                başvurularını yönetmeyi kolaylaştıran kariyer odaklı bir web sitesi.</p>
+                        </div>
+                    </div>
+                    <div class="type-box border">
+                        <svg class="w-25 h-25" viewBox="0 0 63 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M63 31.4C63 14 48.9 -6.1633e-07 31.6 -1.37254e-06C14.2 -2.13312e-06 0.199981 14.1 0.19998 31.4C0.19998 48.7 14.3 62.8 31.6 62.8C48.9 62.8 63 48.8 63 31.4ZM13.4 41.1C13.4 31 21.6 22.9 31.6 22.9C41.6 22.9 49.8 31.1 49.8 41.1C49.8 51.2 41.6 59.3 31.6 59.3C21.6 59.3 13.4 51.2 13.4 41.1Z"
+                                  fill="currentColor"/>
+                            <path d="M63 31.4C63 14 48.9 -6.1633e-07 31.6 -1.37254e-06C14.2 -2.13312e-06 0.199981 14.1 0.19998 31.4C0.19998 48.7 14.3 62.8 31.6 62.8C48.9 62.8 63 48.8 63 31.4ZM13.4 41.1C13.4 31 21.6 22.9 31.6 22.9C41.6 22.9 49.8 31.1 49.8 41.1C49.8 51.2 41.6 59.3 31.6 59.3C21.6 59.3 13.4 51.2 13.4 41.1Z"
+                                  fill="currentColor" fill-opacity="0.2"/>
+                        </svg>
+                        <div>
+                            <h3>İletişim ve Müşteri Desteği Hub'ı</h3>
+                            <p>Müşteri iletişimini güçlendiren, sorulara hızlı cevap veren ve etkileşimi artıran bir
+                                iletişim ve destek odaklı web sitesi.</p>
+                        </div>
+                    </div>
+                    <div class="type-box border">
+                        <svg class="w-25 h-25" viewBox="0 0 63 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M63 31.4C63 14 48.9 -6.1633e-07 31.6 -1.37254e-06C14.2 -2.13312e-06 0.199981 14.1 0.19998 31.4C0.19998 48.7 14.3 62.8 31.6 62.8C48.9 62.8 63 48.8 63 31.4ZM13.4 41.1C13.4 31 21.6 22.9 31.6 22.9C41.6 22.9 49.8 31.1 49.8 41.1C49.8 51.2 41.6 59.3 31.6 59.3C21.6 59.3 13.4 51.2 13.4 41.1Z"
+                                  fill="currentColor"/>
+                            <path d="M63 31.4C63 14 48.9 -6.1633e-07 31.6 -1.37254e-06C14.2 -2.13312e-06 0.199981 14.1 0.19998 31.4C0.19998 48.7 14.3 62.8 31.6 62.8C48.9 62.8 63 48.8 63 31.4ZM13.4 41.1C13.4 31 21.6 22.9 31.6 22.9C41.6 22.9 49.8 31.1 49.8 41.1C49.8 51.2 41.6 59.3 31.6 59.3C21.6 59.3 13.4 51.2 13.4 41.1Z"
+                                  fill="currentColor" fill-opacity="0.2"/>
+                        </svg>
+                        <div>
+                            <h3>Etkinlik ve Haber Merkezi</h3>
+                            <p>Şirket etkinliklerini, haberleri ve duyuruları paylaşan, ziyaretçilere şirketinizin
+                                dinamik yüzünü gösteren etkileşimli bir platform.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="pricing" class="d-flex align-items-center justify-content-center flex-column">
+            <div id="pricing-container">
+                <h1 class="text-center fw-light mb-5">Fiyatlandırma</h1>
+                <div class="d-flex justify-content-center flex-column flex-lg-row gap-5">
+                    <div style="background-color: black; color: whitesmoke" class="card">
+                        <h3 class="align-self-center">Yazılım</h3>
+                        <h4 class="align-self-center">$1000 - $3000</h4>
+                        <ul class="d-flex flex-column gap-3 list-unstyled">
+                            <li>Özel UI/UX Dizayn</li>
+                            <li>Özel Yazılım Hizmeti</li>
+                            <li>Standart İçerik Yönetim Sistemi</li>
+                            <li>G-Analytics ve Search Console Entegrasyonları</li>
+                            <li>Kurumsal E-posta Hizmeti</li>
+                            <li>SEO Uyumlu</li>
+                            <li>Sıfırdan Wireframing + Figma Üzerinde UI/UX Tasarımı</li>
+                        </ul>
+                    </div>
+                    <div style="background-color: black; color: whitesmoke" class="card">
+                        <h3 class="align-self-center">Dizayn</h3>
+                        <h4 class="align-self-center">$100 - $500</h4>
+                        <ul class="d-flex flex-column gap-3 list-unstyled">
+                            <li>Özel UI/UX Dizayn</li>
+                            <li>Özel Dashboard, Web Application, CRM Kurulum Hizmetleri</li>
+                            <li>Özel UI/UX Dizayn</li>
+                            <li>Özel UI/UX Dizayn</li>
+                            <li>Özel UI/UX Dizayn</li>
+                            <li>Özel UI/UX Dizayn</li>
+                            <li>Özel UI/UX Dizayn</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-5 text-black">
+                    <h5>
+                        <span>&egsdot;&nbsp;Girişimci desteği kapsamında 25 yaşından küçük girişimcilere %15 indirim</span>
+                    </h5>
+                    <h5><span>&egsdot;&nbsp;Tasarımlarımızın hepsi müşterilerimize özel hazırlanmaktadır ve hazır şablon kullanılmamaktadır.</span>
+                    </h5>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}
+</body>
+{% block scripts %}
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+    <script src="{% static 'js/3rd_libs/aos.js' %}"></script>
+    <script>
+        AOS.init({disable: 'mobile'});
+    </script>
+    <script>
+        document.documentElement.setAttribute('data-theme', 'dark')
+    </script>
+    <script type="module">
+        import * as THREE from "https://cdn.skypack.dev/three@v0.132.2/build/three.module.js"
+        import {GLTFLoader} from "https://cdn.skypack.dev/three@v0.132.2/examples/jsm/loaders/GLTFLoader.js"
+
+        const loader = new GLTFLoader();
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        camera.position.z = 3;
+        const canvas = document.getElementById('threejs-canvas')
+        const renderer = new THREE.WebGLRenderer({canvas: canvas, antialias: true, alpha: true});
+
+        loader.load('/media/3dAssets/bCircle3d.gltf', function (gltf) {
+            const ambientLight = new THREE.AmbientLight(0x9a3cc3, 0.1);
+            const pointLight = new THREE.PointLight(0x000000, 1);
+            const directionalLight1 = new THREE.DirectionalLight(0x0ef19c, 0.8);
+            const directionalLight2 = new THREE.DirectionalLight(0xef10e6, 0.8);
+            directionalLight2.position.y = -15
+            scene.add(directionalLight1);
+            scene.add(directionalLight2);
+            scene.add(pointLight);
+            scene.add(ambientLight);
+
+            const model = gltf.scene
+
+            var mixer = new THREE.AnimationMixer(model);
+            var action = mixer.clipAction(gltf.animations[0]).play();
+            var action1 = mixer.clipAction(gltf.animations[1]).play();
+            var action2 = mixer.clipAction(gltf.animations[2]).play();
+            model.scale.x = 1;
+            model.scale.y = 1;
+            model.scale.z = 1;
+
+            const material1 = new THREE.MeshPhongMaterial({
+                color: 0x125448,
+                shininess: 100,
+                specular: 0xffffff,
+            });
+            const material2 = new THREE.MeshPhongMaterial({
+                color: 0xffffff,
+                shininess: 50,
+                specular: 0x2dd2b4,
+            });
+            const material3 = new THREE.MeshPhongMaterial({
+                color: 0xffffff,
+                shininess: 50,
+                specular: 0x2dd2b4,
+            });
+            gltf.scene.traverse((object) => {
+                if (object.type === 'Mesh') {
+                    if (object.name === 'BezierCircle') {
+                        object.material = material1;
+                    }
+                    if (object.name === 'BezierCircle001') {
+                        object.material = material2;
+                    }
+                    if (object.name === 'BezierCircle002') {
+                        object.material = material3;
+                    }
+                }
+            });
+            scene.add(model);
+
+            function animate() {
+                requestAnimationFrame(animate);
+                renderer.render(scene, camera);
+                if (mixer) {
+                    mixer.update(0.005);
+                }
+                window.addEventListener('scroll', function () {
+                })
+                model.rotation.x += 0.001
+                model.rotation.y += 0.001
+                renderer.render(scene, camera);
+            }
+
+            animate();
+
+        }, undefined, function (error) {
+            console.error(error);
+        });
+
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth / 2.4, window.innerHeight / 2.4)
+        renderer.setPixelRatio(window.devicePixelRatio)
+
+        window.addEventListener("resize", onWindowResize, false);
+
+        function onWindowResize() {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setPixelRatio(window.devicePixelRatio)
+            renderer.setSize(window.innerWidth / 2, window.innerHeight / 2);
+        }
+    </script>
+{% endblock %}
+</html>

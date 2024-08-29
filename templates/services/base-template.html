@@ -1,0 +1,182 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height">
+    <title>Main</title>
+    {% block style %}
+        <link rel="stylesheet" href="{% static 'css/base-template.css' %}">
+    {% endblock %}
+</head>
+<body>
+{% block content %}
+    <main id="content">
+        <section class="d-flex flex-column justify-content-around py-5" id="introduction-section">
+            <div class="container d-flex align-items-center flex-column gap-5">
+                <div class="d-flex align-items-center justify-content-between flex-column flex-lg-row gap-5">
+                    <div class="d-flex align-items-center align-items-lg-start justify-content-center flex-column gap-2 gap-xxl-3 w-75"
+                         id="introduction-header-container">
+                        <h1 style="font-weight: bold" class="gradient-text">Orion Studio,<br> Dijital Dönüşümünüzde
+                            Yanınızda</h1>
+                        <h5 style="font-weight: lighter" class="gradient-text">İhtiyaçlarınıza uygun özelleştirilmiş web
+                            sitenizi
+                            tasarlıyoruz ve uzmanlığınızı
+                            herkese göstermenize yardımcı oluyoruz.</h5>
+                        <button class="btn btn-ghost">Hemen Başla<i class="fa fa-chevron-right ms-2"></i></button>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <div class="d-flex justify-content-center align-items-center"
+                             id="introduction-threejs-container">
+                            <div><img></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex w-100 p-5">
+                    <ul class="d-flex align-items-center justify-content-center list-unstyled flex-row w-100">
+                        <li>
+                            <svg class="w-100 h-100" viewBox="0 0 63 63" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M63 31.4C63 14 48.9 -6.1633e-07 31.6 -1.37254e-06C14.2 -2.13312e-06 0.199981 14.1 0.19998 31.4C0.19998 48.7 14.3 62.8 31.6 62.8C48.9 62.8 63 48.8 63 31.4ZM13.4 41.1C13.4 31 21.6 22.9 31.6 22.9C41.6 22.9 49.8 31.1 49.8 41.1C49.8 51.2 41.6 59.3 31.6 59.3C21.6 59.3 13.4 51.2 13.4 41.1Z"
+                                      fill="currentColor"/>
+                                <path d="M63 31.4C63 14 48.9 -6.1633e-07 31.6 -1.37254e-06C14.2 -2.13312e-06 0.199981 14.1 0.19998 31.4C0.19998 48.7 14.3 62.8 31.6 62.8C48.9 62.8 63 48.8 63 31.4ZM13.4 41.1C13.4 31 21.6 22.9 31.6 22.9C41.6 22.9 49.8 31.1 49.8 41.1C49.8 51.2 41.6 59.3 31.6 59.3C21.6 59.3 13.4 51.2 13.4 41.1Z"
+                                      fill="currentColor" fill-opacity="0.2"/>
+                            </svg>
+                        </li>
+                        <li>
+                            <svg class="w-100 h-100" viewBox="0 0 63 63" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M63 31.4C63 14 48.9 -6.1633e-07 31.6 -1.37254e-06C14.2 -2.13312e-06 0.199981 14.1 0.19998 31.4C0.19998 48.7 14.3 62.8 31.6 62.8C48.9 62.8 63 48.8 63 31.4ZM13.4 41.1C13.4 31 21.6 22.9 31.6 22.9C41.6 22.9 49.8 31.1 49.8 41.1C49.8 51.2 41.6 59.3 31.6 59.3C21.6 59.3 13.4 51.2 13.4 41.1Z"
+                                      fill="currentColor"/>
+                                <path d="M63 31.4C63 14 48.9 -6.1633e-07 31.6 -1.37254e-06C14.2 -2.13312e-06 0.199981 14.1 0.19998 31.4C0.19998 48.7 14.3 62.8 31.6 62.8C48.9 62.8 63 48.8 63 31.4ZM13.4 41.1C13.4 31 21.6 22.9 31.6 22.9C41.6 22.9 49.8 31.1 49.8 41.1C49.8 51.2 41.6 59.3 31.6 59.3C21.6 59.3 13.4 51.2 13.4 41.1Z"
+                                      fill="currentColor" fill-opacity="0.2"/>
+                            </svg>
+                        </li>
+                        <li>
+                            <svg class="w-100 h-100" viewBox="0 0 63 63" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M63 31.4C63 14 48.9 -6.1633e-07 31.6 -1.37254e-06C14.2 -2.13312e-06 0.199981 14.1 0.19998 31.4C0.19998 48.7 14.3 62.8 31.6 62.8C48.9 62.8 63 48.8 63 31.4ZM13.4 41.1C13.4 31 21.6 22.9 31.6 22.9C41.6 22.9 49.8 31.1 49.8 41.1C49.8 51.2 41.6 59.3 31.6 59.3C21.6 59.3 13.4 51.2 13.4 41.1Z"
+                                      fill="currentColor"/>
+                                <path d="M63 31.4C63 14 48.9 -6.1633e-07 31.6 -1.37254e-06C14.2 -2.13312e-06 0.199981 14.1 0.19998 31.4C0.19998 48.7 14.3 62.8 31.6 62.8C48.9 62.8 63 48.8 63 31.4ZM13.4 41.1C13.4 31 21.6 22.9 31.6 22.9C41.6 22.9 49.8 31.1 49.8 41.1C49.8 51.2 41.6 59.3 31.6 59.3C21.6 59.3 13.4 51.2 13.4 41.1Z"
+                                      fill="currentColor" fill-opacity="0.2"/>
+                            </svg>
+                        </li>
+                        <li>
+                            <svg class="w-100 h-100" viewBox="0 0 63 63" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M63 31.4C63 14 48.9 -6.1633e-07 31.6 -1.37254e-06C14.2 -2.13312e-06 0.199981 14.1 0.19998 31.4C0.19998 48.7 14.3 62.8 31.6 62.8C48.9 62.8 63 48.8 63 31.4ZM13.4 41.1C13.4 31 21.6 22.9 31.6 22.9C41.6 22.9 49.8 31.1 49.8 41.1C49.8 51.2 41.6 59.3 31.6 59.3C21.6 59.3 13.4 51.2 13.4 41.1Z"
+                                      fill="currentColor"/>
+                                <path d="M63 31.4C63 14 48.9 -6.1633e-07 31.6 -1.37254e-06C14.2 -2.13312e-06 0.199981 14.1 0.19998 31.4C0.19998 48.7 14.3 62.8 31.6 62.8C48.9 62.8 63 48.8 63 31.4ZM13.4 41.1C13.4 31 21.6 22.9 31.6 22.9C41.6 22.9 49.8 31.1 49.8 41.1C49.8 51.2 41.6 59.3 31.6 59.3C21.6 59.3 13.4 51.2 13.4 41.1Z"
+                                      fill="currentColor" fill-opacity="0.2"/>
+                            </svg>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="d-flex py-5">
+            <div class="container d-flex">
+                <div class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-5 w-100"
+                     id="cards">
+                    <div class="d-flex card py-3 px-2">
+                        <ul class="list-unstyled">
+                            <li>asdasdasdasd</li>
+                            <li><a>
+                                    <span><svg width="30px" height="30px" viewBox="0 0 24 24" fill="none"
+                                               xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier"
+                                                                                     stroke-width="0"></g><g
+                                            id="SVGRepo_tracerCarrier" stroke-linecap="round"
+                                            stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path
+                                            d="M3 14V10C3 6.22876 3 4.34315 4.17157 3.17157C5.34315 2 7.22876 2 11 2H13C16.7712 2 18.6569 2 19.8284 3.17157C20.4816 3.82476 20.7706 4.69989 20.8985 6M21 10V14C21 17.7712 21 19.6569 19.8284 20.8284C18.6569 22 16.7712 22 13 22H11C7.22876 22 5.34315 22 4.17157 20.8284C3.51839 20.1752 3.22937 19.3001 3.10149 18"
+                                            stroke="#e67019" stroke-width="1.2" stroke-linecap="round"></path> <path
+                                            d="M8 14H13" stroke="#e67019" stroke-width="1.2"
+                                            stroke-linecap="round"></path> <path d="M8 10H9M16 10H12" stroke="#e67019"
+                                                                                 stroke-width="1.2"
+                                                                                 stroke-linecap="round"></path> </g></svg></span>
+                                <span>Tek Sayfalık Web Sitesi</span>
+                            </a></li>
+                            <li>asd</li>
+                            <li>asd</li>
+                            <li>asd</li>
+                            <li>asd</li>
+                            <li>asd</li>
+                            <li>asd</li>
+                            <li>asd</li>
+                            <li>asd</li>
+                            <li>asd</li>
+                            <li>asd</li>
+                            <li>asd</li>
+                        </ul>
+                    </div>
+                    <div style="width: 18rem" class="d-flex card py-3 px-2">
+                        <ul class="list-unstyled">
+                            <li>asdasdasdasd</li>
+                            <li>asd</li>
+                            <li>asd</li>
+                            <li>asd</li>
+                            <li>asd</li>
+                        </ul>
+                    </div>
+                    <div style="width: 18rem" class="d-flex card py-3 px-2">
+                        <ul class="list-unstyled">
+                            <li>asdasdasdasd</li>
+                            <li>asd</li>
+                            <li>asd</li>
+                            <li>asd</li>
+                            <li>asd</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="d-flex py-5">
+            <div class="container d-flex justify-content-center align-items-center flex-column">
+                <div><h1>Neye İhtiyacınız Var?</h1></div>
+                <div class="d-flex justify-content-center w-100 p-4">
+                    <ul class="list-unstyled d-flex justify-content-center flex-row flex-wrap gap-3">
+                        <li><img src="{% static 'rk.png' %}"></li>
+                        <li><img src="{% static 'rk.png' %}"></li>
+                        <li><img src="{% static 'rk.png' %}"></li>
+                        <li><img src="{% static 'rk.png' %}"></li>
+                        <li><img src="{% static 'rk.png' %}"></li>
+                        <li><img src="{% static 'rk.png' %}"></li>
+                    </ul>
+                </div>
+                <div class="d-flex flex-column flex-lg-row justify-content-center gap-5 py-4 w-100 h-100">
+                    <div class="d-flex">
+                        <ul class="list-unstyled d-flex align-items-start justify-content-center flex-column flex-wrap px-2">
+                            <li>asasdasdasdasdfasdgasdfasdfasfasdfas</li>
+                            <li>asasdasdasd</li>
+                            <li>asasdasdasd</li>
+                            <li>asasdasdasd</li>
+                        </ul>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center flex-wrap w-25 h-100">
+                        <span style="background-color: #6f42c1"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container d-flex p-5">
+            <div class="d-flex">
+                <div>
+                    <ul class="list-unstyled">
+                        <li>asd</li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="d-flex">
+        </section>
+    </main>
+{% endblock %}
+</body>
+{% block scripts %}
+{% endblock %}
+</html>

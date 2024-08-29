@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Talep Başarılı</title>
+</head>
+<body>
+{% block content %}
+    <div style="min-height: 70vh" class="d-flex align-items-center justify-content-center flex-column">
+        <dotlottie-player src="https://lottie.host/d792c7d1-e9bd-43df-a5b3-162a0c4a2ba7/C1WGLVC6mK.json"
+                                          background="transparent" speed="1" style="width: 30vw; height: 30vh;"
+                                          autoplay></dotlottie-player>
+
+        <h2>Talebiniz Başarıyla Gönderildi!</h2>
+        <p>En kısa sürede sizinle iletişime geçeceğiz.</p>
+    </div>
+{% endblock %}
+</body>
+{% block scripts %}
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+{% endblock %}
+</html>

@@ -1,0 +1,209 @@
+/* GENERAL SITE SETTINGS BEGIN */
+body {
+    background-color: var(--background) !important;
+    color: var(--text) !important;
+}
+
+#container {
+    margin: auto;
+    width: 1200px;
+}
+
+@font-face {
+    font-family: base-font;
+    src: url("../fonts/Red_Hat_Display/static/RedHatDisplay-Light.7007bab8d9f8.ttf");
+}
+
+@font-face {
+    font-family: content-font;
+    src: url("../fonts/Red_Hat_Display/static/RedHatDisplay-Regular.f913c823bff6.ttf");
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--background);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 2rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+}
+
+/* GENERAL SITE SETTINGS END */
+
+/* TEXT SETTINGS BEGIN */
+
+html, body a {
+    text-decoration: none !important;
+    color: var(--text);
+}
+
+.gradient-text {
+    background-image: linear-gradient(to left, var(--text-900), var(--text-600), var(--text-900));
+    color: transparent;
+    background-clip: text;
+    font-family: "Tahoma", sans-serif;
+}
+
+::selection {
+    background-color: var(--secondary);
+    color: black;
+    border-radius: 5rem;
+}
+
+/* TEXT SETTINGS END */
+
+/* COLOR SETTINGS BEGIN */
+:root {
+    --text: #0d1715;
+    --background: #f6fbfa;""
+    --primary: #3ec3aa;
+    --secondary: #8ce7d6;
+    --accent: #5beacf;
+
+    --text-50: #eff6f4;
+    --text-100: #deedea;
+    --text-200: #bedad5;
+    --text-300: #9dc8bf;
+    --text-400: #7cb6aa;
+    --text-500: #5ca395;
+    --text-600: #498377;
+    --text-700: #376259;
+    --text-800: #25413c;
+    --text-900: #12211e;
+    --text-950: #09100f;
+
+    --background-50: #edf7f5;
+    --background-100: #dcefeb;
+    --background-200: #b9dfd8;
+    --background-300: #95d0c4;
+    --background-400: #72c0b0;
+    --background-500: #4fb09d;
+    --background-600: #3f8d7d;
+    --background-700: #2f6a5e;
+    --background-800: #20463f;
+    --background-900: #10231f;
+    --background-950: #081210;
+
+    --primary-50: #ebf9f7;
+    --primary-100: #d8f3ee;
+    --primary-200: #b1e7dd;
+    --primary-300: #8adbcc;
+    --primary-400: #63cfbb;
+    --primary-500: #3cc3aa;
+    --primary-600: #309c88;
+    --primary-700: #247566;
+    --primary-800: #184e44;
+    --primary-900: #0c2722;
+    --primary-950: #061411;
+
+    --secondary-50: #eafbf7;
+    --secondary-100: #d5f6f0;
+    --secondary-200: #abede1;
+    --secondary-300: #81e4d2;
+    --secondary-400: #57dbc3;
+    --secondary-500: #2dd2b4;
+    --secondary-600: #24a890;
+    --secondary-700: #1b7e6c;
+    --secondary-800: #125448;
+    --secondary-900: #092a24;
+    --secondary-950: #041512;
+
+    --accent-50: #e8fcf8;
+    --accent-100: #d2f9f2;
+    --accent-200: #a5f3e5;
+    --accent-300: #78edd8;
+    --accent-400: #4ae8cb;
+    --accent-500: #1de2be;
+    --accent-600: #17b598;
+    --accent-700: #128772;
+    --accent-800: #0c5a4c;
+    --accent-900: #062d26;
+    --accent-950: #031713;
+}
+
+html[data-theme='dark'] {
+    --text: #f8f5ed;
+    --background: #080603;
+    --secondary: rgba(248, 245, 237, 0.4);
+}
+
+html[data-theme='yellow'] {
+    --text: #000000;
+    --background: rgba(227, 255, 110, 0.82);
+    --secondary: rgba(0, 0, 0, 0.4);
+}
+
+html[data-theme='red'] {
+    --text: #700056;
+    --background: #ffffff;
+    --secondary: rgba(112, 0, 86, 0.4);
+}
+
+html[data-theme='blue'] {
+    --text: #0d8dda;
+    --background: #fceaf7;
+    --secondary: rgba(13, 141, 218, 0.2);
+}
+
+/* COLOR SETTINGS END */
+
+
+/* CUSTOM BUTTONS */
+
+.btn {
+    display: flex;
+    height: 48px;
+    border-radius: 50px;
+    font-weight: bold;
+    padding-left: 32px;
+    padding-right: 32px;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: var(--text-50);
+}
+
+.btn.btn-ghost {
+    background-color: var(--background);
+    border-color: var(--text);
+    color: var(--text);
+}
+
+.btn.btn-primary:hover {
+    background-color: var(--primary-600);
+    border-color: var(--primary-600);
+    color: var(--text-50);
+}
+
+.btn.btn-ghost:hover {
+    background-color: var(--text);
+    color: var(--background);
+}
+
+@media only screen and (max-width: 1200px) {
+    #container {
+        width: auto;
+    }
+}
+
+/*https://www.realtimecolors.com/?colors=012128-f0fcff-026983-5481fc-0413ec&fonts=Poppins-Poppins*/
+/*https://www.realtimecolors.com/?colors=edebeb-110a0a-de9f9c-851a15-f91c12&fonts=Poppins-Poppins*/
+/*https://www.realtimecolors.com/?colors=e8f3fa-051015-91c1e5-2f218d-824fd5&fonts=Poppins-Poppins*/
+
+

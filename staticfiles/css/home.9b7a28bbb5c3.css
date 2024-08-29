@@ -1,0 +1,96 @@
+@keyframes drop-in {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+
+/* SERVICES */
+.card > ul > li > a > span:nth-child(2) {
+    font-size: large;
+    font-weight: bolder;
+    padding-left: 1rem;
+}
+
+
+section:nth-child(even) {
+    background-color: var(--background) !important;
+    color: var(--text);
+}
+
+section:nth-child(2) {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000" fill="%23FFCA92"><path d="M1912 1209c27-319-72-699-318-882-187-139-462-224-785-204S85 468 84 880c0 455 481 345 636 484s139 514 477 516c386 3 693-420 715-671Z"></path></svg>');
+    background-blend-mode: overlay;
+    background-position: top left 10rem, right 15% bottom 19rem;
+    background-size: 25rem, 18rem;
+    background-attachment: local, local;
+    background-repeat: no-repeat;
+}
+
+#portfolio-container .box {
+    width: 250px;
+    height: 250px;
+    border-radius: 3rem;
+    border: 1px solid black;
+}
+
+.tabs {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.tab {
+    display: inline-block;
+    padding: 10px;
+    margin: .5rem;
+    cursor: pointer;
+    color: whitesmoke;
+    background-color: black;
+    transition: background-color 0.5s;
+    border-radius: 10px;
+}
+
+.tab.active {
+    display: inline-block;
+    padding: 10px;
+    margin: .5rem;
+    cursor: pointer;
+    color: var(--text);
+    background-color: whitesmoke;
+    box-shadow: 0 0 0 black;
+    border-radius: 10px;
+    outline: 1px solid black;
+}
+
+.tab-content {
+    display: none;
+    opacity: 0;
+    padding: 20px;
+    background-color: var(--background);
+    color: var(--text);
+    border-radius: 10px;
+    transition: ease-in-out 0.8s;
+}
+
+.tab-content.active {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center !important;
+    justify-content: center !important;
+    opacity: 1;
+    animation: contentAnimation 0.6s forwards ease-in-out;
+}
+
+@keyframes contentAnimation {
+    from {
+        filter: blur(10px);
+    }
+    to {
+        filter: blur(0px);
+    }
+}

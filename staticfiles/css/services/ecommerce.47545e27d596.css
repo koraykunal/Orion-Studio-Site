@@ -1,0 +1,31 @@
+section:nth-child(2) > div > div {
+    min-height: 500px;
+    padding: 2rem;
+
+    & div {
+        max-width: 600px;
+    }
+}
+
+section:nth-child(3) > div > .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 300px;
+    height: 300px;
+    border-radius: 1rem;
+    padding: 2rem;
+    background-color: #D630AC;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg stroke='%23C008FF' stroke-width='61.7' stroke-opacity='0.05' %3E%3Ccircle fill='%23D630AC' cx='0' cy='0' r='1800'/%3E%3Ccircle fill='%23ca30ad' cx='0' cy='0' r='1700'/%3E%3Ccircle fill='%23be2faf' cx='0' cy='0' r='1600'/%3E%3Ccircle fill='%23b32fb0' cx='0' cy='0' r='1500'/%3E%3Ccircle fill='%23a72eb2' cx='0' cy='0' r='1400'/%3E%3Ccircle fill='%239b2eb3' cx='0' cy='0' r='1300'/%3E%3Ccircle fill='%238f2eb4' cx='0' cy='0' r='1200'/%3E%3Ccircle fill='%23842db6' cx='0' cy='0' r='1100'/%3E%3Ccircle fill='%23782db7' cx='0' cy='0' r='1000'/%3E%3Ccircle fill='%236c2cb9' cx='0' cy='0' r='900'/%3E%3Ccircle fill='%23602cba' cx='0' cy='0' r='800'/%3E%3Ccircle fill='%23552bbc' cx='0' cy='0' r='700'/%3E%3Ccircle fill='%23492bbd' cx='0' cy='0' r='600'/%3E%3Ccircle fill='%233d2bbe' cx='0' cy='0' r='500'/%3E%3Ccircle fill='%23312ac0' cx='0' cy='0' r='400'/%3E%3Ccircle fill='%23262ac1' cx='0' cy='0' r='300'/%3E%3Ccircle fill='%231a29c3' cx='0' cy='0' r='200'/%3E%3Ccircle fill='%230E29C4' cx='0' cy='0' r='100'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#nav-logo {
+    background-image: url('/media/logo/orionLogoV3W.png')!important;
+}
+
+.navbar-toggler {
+    background-color: #dedede !important;
+    border-color: #dedede !important;
+}

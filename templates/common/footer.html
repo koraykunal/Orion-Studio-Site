@@ -1,0 +1,77 @@
+{% load static %}
+
+<style>
+    footer {
+        background-color: var(--text);
+        border-radius: 2rem;
+        width: 1200px;
+        font-family: content-font, sans-serif;
+        color: var(--background);
+    }
+
+    #footer-header {
+        font-size: x-large;
+        font-family: content-font, sans-serif;
+    }
+
+    .footer-text {
+        font-size: large;
+        color: var(--background);
+        opacity: 0.7;
+        font-family: base-font, sans-serif;
+    }
+
+    footer a {
+        color: var(--background) !important;
+    }
+
+    @media only screen and (max-width: 760px) {
+        footer {
+            border-radius: 0;
+            margin: 0;
+        }
+    }
+</style>
+
+<div class="d-flex justify-content-center mt-5 mb-lg-3">
+    <footer>
+        <div class="d-flex align-items-start justify-content-lg-evenly flex-column flex-md-row gap-5 p-5">
+            <div class="d-flex flex-column">
+                <div class="text-center">
+                    <img style="max-width: 300px; height: auto" class="w-100" src="{% static 'logo/footerLogo.png' %}">
+                </div>
+                <div class="d-flex flex-column">
+                    <div class="d-flex justify-content-center gap-3 mt-3" id="social-media-links">
+                        <a href="https://www.instagram.com/orionstud.io/"><span><i
+                                class="fa-brands fa-instagram fa-xl"></i></span></a>
+                        <a style="color: white" href="https://www.linkedin.com/company/orion-studio-net/">
+                            <span><i class="fa-brands fa-linkedin fa-xl"></i></span>
+                        </a>
+                        <span><i style="color: gray" class="fa-brands fa-whatsapp fa-xl"></i></span>
+                        <span><i style="color: gray" class="fa-brands fa-behance fa-xl"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex flex-column flex-lg-row justify-content-center justify-content-lg-evenly w-50 gap-5">
+                <div class="d-flex flex-column gap-3 h-100">
+                    <span class="" id="footer-header">Hizmetler</span>
+                    <a href="{% url 'corporation' %}"><span class="footer-text">Kurumsal Web Sitesi</span></a>
+                    <a href="{% url 'ecom' %}"><span class="footer-text">E-Ticaret Sitesi</span></a>
+                    <a href="{% url 'personal' %}"><span class="footer-text">Kişisel Portfolyö Sitesi</span></a>
+                    <a href="{% url 'single-page' %}"><span class="footer-text">Tek Sayfalık Web Sitesi</span></a>
+                </div>
+                <div class="d-flex flex-column gap-3 h-100">
+                    <span id="footer-header">Diğer</span>
+                    <a href="{% url 'request' %}"><span class="footer-text">Fiyat Talep</span></a>
+                    <span class="disabled footer-text">Blog</span>
+                    <a href="{% url 'contact' %}"><span class="footer-text">İletişim</span></a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-center align-items-center">
+            <span class="pb-3">© 2024 Orion Studio</span>
+        </div>
+    </footer>
+</div>
+

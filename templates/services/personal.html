@@ -1,0 +1,217 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html data-theme="dark" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal</title>
+    {% block style %}
+        <link rel="stylesheet" href="{% static 'css/base-template.css' %}">
+        <link rel="stylesheet" href="{% static 'css/services/personal.css' %}">
+    {% endblock %}
+</head>
+<body>
+{% block content %}
+    <main id="content">
+        <section class="d-flex align-items-center justify-content-around flex-column"
+                 id="introduction-section">
+            <div class="d-flex align-items-center flex-column gap-5">
+                <div class="d-flex align-items-center justify-content-center flex-column flex-lg-row">
+                    <div class="d-flex align-items-center align-items-lg-start justify-content-center flex-column gap-2 gap-xxl-3"
+                         id="introduction-header-container">
+                        <h1>Portfolyo, CV ve Tanıtım Amaçlı Yaratıcı Web Tasarımı</h1>
+                        <h4>Kişisel web siteniz ile online varlığınızı oluşturun ve profesyonel bir şekilde kendinizi ve
+                            projelerinizi tanıtın. Size ve ihtiyaçlarınıza uygun, modern bir tasarım ile ön planda
+                            olabilir ve kendinizi profesyonel ve etkileyici şekilde sunabilirsiniz.</h4>
+                        <a href="{% url 'request' %}" class="btn btn-dark">Hemen Başla<i class="fa fa-chevron-right ms-2"></i></a>
+                    </div>
+                    <div id="introduction-threejs-container" class="d-flex align-items-center justify-content-center">
+                        <dotlottie-player src="https://lottie.host/ad2e0d77-bbd9-4af0-bb57-c04da3d9e714/d7DdxBBd5k.json"
+                                          background="transparent" speed="1" style="width: auto; height: auto;" loop
+                                          autoplay></dotlottie-player>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="d-flex justify-content-center">
+            <div class="d-flex flex-column justify-content-center align-items-center gap-5">
+                <h2>Kişisel Web Sitesi Kimler İçindir?</h2>
+                <div class="d-flex flex-wrap justify-content-center gap-3">
+                    <div class="type-box border">
+                        <svg class="w-25 h-25" viewBox="0 0 69 69" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M52.2414 27.1207C52.2414 41.0173 41.0171 52.2415 27.1205 52.2415C13.2239 52.2415 2 41.0173 2 27.1207C2 13.2241 13.2239 2 27.1205 2C41.5516 2.53448 52.2414 13.2241 52.2414 27.1207Z"
+                                  stroke="currentColor" stroke-width="2.2857" stroke-miterlimit="10"
+                                  stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M52.2414 27.1207C52.2414 41.0173 41.0171 52.2415 27.1205 52.2415C13.2239 52.2415 2 41.0173 2 27.1207C2 13.2241 13.2239 2 27.1205 2C41.5516 2.53448 52.2414 13.2241 52.2414 27.1207Z"
+                                  stroke="currentColor" stroke-opacity="0.2" stroke-width="2.2857"
+                                  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M68.811 43.69C68.811 57.5866 57.5868 68.8109 43.6902 68.8109C29.7936 68.8109 18.5693 57.5866 18.5693 43.69C18.5693 29.7934 29.7936 18.5693 43.6902 18.5693C57.5868 18.5693 68.811 29.7934 68.811 43.69Z"
+                                  fill="currentColor"/>
+                            <path d="M68.811 43.69C68.811 57.5866 57.5868 68.8109 43.6902 68.8109C29.7936 68.8109 18.5693 57.5866 18.5693 43.69C18.5693 29.7934 29.7936 18.5693 43.6902 18.5693C57.5868 18.5693 68.811 29.7934 68.811 43.69Z"
+                                  fill="currentColor" fill-opacity="0.2"/>
+                        </svg>
+                        <div>
+                            <h3>Kişisel Blog</h3>
+                            <p>Kendi düşüncelerinizi paylaşmanın ve ilgi alanlarınızda içerikler üretmenin mükemmel bir
+                                yolu olan kişisel bir blog oluşturun.</p>
+                        </div>
+                    </div>
+                    <div class="type-box border">
+                        <svg class="w-25 h-25" viewBox="0 0 69 69" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M52.2414 27.1207C52.2414 41.0173 41.0171 52.2415 27.1205 52.2415C13.2239 52.2415 2 41.0173 2 27.1207C2 13.2241 13.2239 2 27.1205 2C41.5516 2.53448 52.2414 13.2241 52.2414 27.1207Z"
+                                  stroke="currentColor" stroke-width="2.2857" stroke-miterlimit="10"
+                                  stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M52.2414 27.1207C52.2414 41.0173 41.0171 52.2415 27.1205 52.2415C13.2239 52.2415 2 41.0173 2 27.1207C2 13.2241 13.2239 2 27.1205 2C41.5516 2.53448 52.2414 13.2241 52.2414 27.1207Z"
+                                  stroke="currentColor" stroke-opacity="0.2" stroke-width="2.2857"
+                                  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M68.811 43.69C68.811 57.5866 57.5868 68.8109 43.6902 68.8109C29.7936 68.8109 18.5693 57.5866 18.5693 43.69C18.5693 29.7934 29.7936 18.5693 43.6902 18.5693C57.5868 18.5693 68.811 29.7934 68.811 43.69Z"
+                                  fill="currentColor"/>
+                            <path d="M68.811 43.69C68.811 57.5866 57.5868 68.8109 43.6902 68.8109C29.7936 68.8109 18.5693 57.5866 18.5693 43.69C18.5693 29.7934 29.7936 18.5693 43.6902 18.5693C57.5868 18.5693 68.811 29.7934 68.811 43.69Z"
+                                  fill="currentColor" fill-opacity="0.2"/>
+                        </svg>
+                        <div>
+                            <h3>Portfolyo</h3>
+                            <p>Sanatçı, tasarımcı veya yaratıcı profesyonelseniz, portföy web sitesi yeteneklerinizi
+                                sergilemenin ve potansiyel müşterilere örnekler sunmanın harika bir yoludur.
+                                İşlerinizi sergileyerek, projelerinizin detaylarını paylaşabilir ve sanatsal
+                                yeteneklerinizi vurgulayabilirsiniz.</p>
+                        </div>
+                    </div>
+                    <div class="type-box border">
+                        <svg class="w-25 h-25" viewBox="0 0 69 69" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M52.2414 27.1207C52.2414 41.0173 41.0171 52.2415 27.1205 52.2415C13.2239 52.2415 2 41.0173 2 27.1207C2 13.2241 13.2239 2 27.1205 2C41.5516 2.53448 52.2414 13.2241 52.2414 27.1207Z"
+                                  stroke="currentColor" stroke-width="2.2857" stroke-miterlimit="10"
+                                  stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M52.2414 27.1207C52.2414 41.0173 41.0171 52.2415 27.1205 52.2415C13.2239 52.2415 2 41.0173 2 27.1207C2 13.2241 13.2239 2 27.1205 2C41.5516 2.53448 52.2414 13.2241 52.2414 27.1207Z"
+                                  stroke="currentColor" stroke-opacity="0.2" stroke-width="2.2857"
+                                  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M68.811 43.69C68.811 57.5866 57.5868 68.8109 43.6902 68.8109C29.7936 68.8109 18.5693 57.5866 18.5693 43.69C18.5693 29.7934 29.7936 18.5693 43.6902 18.5693C57.5868 18.5693 68.811 29.7934 68.811 43.69Z"
+                                  fill="currentColor"/>
+                            <path d="M68.811 43.69C68.811 57.5866 57.5868 68.8109 43.6902 68.8109C29.7936 68.8109 18.5693 57.5866 18.5693 43.69C18.5693 29.7934 29.7936 18.5693 43.6902 18.5693C57.5868 18.5693 68.811 29.7934 68.811 43.69Z"
+                                  fill="currentColor" fill-opacity="0.2"/>
+                        </svg>
+                        <div>
+                            <h3>CV</h3>
+                            <p>Geleneksel bir özgeçmişin ötesine geçen bu web sitesi, interaktif tasarımlar, videolar ve
+                                daha fazlasını içerebilir.
+                                İşverenlere daha etkileyici bir şekilde kendinizi tanıtarak, kariyerinizi ve
+                                yeteneklerinizi vurgulayabilirsiniz.</p>
+                        </div>
+                    </div>
+                    <div class="type-box border">
+                        <svg class="w-25 h-25" viewBox="0 0 69 69" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M52.2414 27.1207C52.2414 41.0173 41.0171 52.2415 27.1205 52.2415C13.2239 52.2415 2 41.0173 2 27.1207C2 13.2241 13.2239 2 27.1205 2C41.5516 2.53448 52.2414 13.2241 52.2414 27.1207Z"
+                                  stroke="currentColor" stroke-width="2.2857" stroke-miterlimit="10"
+                                  stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M52.2414 27.1207C52.2414 41.0173 41.0171 52.2415 27.1205 52.2415C13.2239 52.2415 2 41.0173 2 27.1207C2 13.2241 13.2239 2 27.1205 2C41.5516 2.53448 52.2414 13.2241 52.2414 27.1207Z"
+                                  stroke="currentColor" stroke-opacity="0.2" stroke-width="2.2857"
+                                  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M68.811 43.69C68.811 57.5866 57.5868 68.8109 43.6902 68.8109C29.7936 68.8109 18.5693 57.5866 18.5693 43.69C18.5693 29.7934 29.7936 18.5693 43.6902 18.5693C57.5868 18.5693 68.811 29.7934 68.811 43.69Z"
+                                  fill="currentColor"/>
+                            <path d="M68.811 43.69C68.811 57.5866 57.5868 68.8109 43.6902 68.8109C29.7936 68.8109 18.5693 57.5866 18.5693 43.69C18.5693 29.7934 29.7936 18.5693 43.6902 18.5693C57.5868 18.5693 68.811 29.7934 68.811 43.69Z"
+                                  fill="currentColor" fill-opacity="0.2"/>
+                        </svg>
+                        <div>
+                            <h3>Uzmanlık Danışmanlığı</h3>
+                            <p>Danışman veya koç olarak çalışıyorsanız, kişisel web sitenizden danışmanlık
+                                hizmetlerinizi ve uzmanlığınızı tanıtabilirsiniz.
+                                Müşterilere sunduğunuz değerleri anlatarak, referanslarınızı paylaşabilir ve iletişim
+                                kanalları oluşturabilirsiniz.</p>
+                        </div>
+                    </div>
+                    <div class="type-box border">
+                        <svg class="w-25 h-25" viewBox="0 0 69 69" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M52.2414 27.1207C52.2414 41.0173 41.0171 52.2415 27.1205 52.2415C13.2239 52.2415 2 41.0173 2 27.1207C2 13.2241 13.2239 2 27.1205 2C41.5516 2.53448 52.2414 13.2241 52.2414 27.1207Z"
+                                  stroke="currentColor" stroke-width="2.2857" stroke-miterlimit="10"
+                                  stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M52.2414 27.1207C52.2414 41.0173 41.0171 52.2415 27.1205 52.2415C13.2239 52.2415 2 41.0173 2 27.1207C2 13.2241 13.2239 2 27.1205 2C41.5516 2.53448 52.2414 13.2241 52.2414 27.1207Z"
+                                  stroke="currentColor" stroke-opacity="0.2" stroke-width="2.2857"
+                                  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M68.811 43.69C68.811 57.5866 57.5868 68.8109 43.6902 68.8109C29.7936 68.8109 18.5693 57.5866 18.5693 43.69C18.5693 29.7934 29.7936 18.5693 43.6902 18.5693C57.5868 18.5693 68.811 29.7934 68.811 43.69Z"
+                                  fill="currentColor"/>
+                            <path d="M68.811 43.69C68.811 57.5866 57.5868 68.8109 43.6902 68.8109C29.7936 68.8109 18.5693 57.5866 18.5693 43.69C18.5693 29.7934 29.7936 18.5693 43.6902 18.5693C57.5868 18.5693 68.811 29.7934 68.811 43.69Z"
+                                  fill="currentColor" fill-opacity="0.2"/>
+                        </svg>
+                        <div>
+                            <h3>Ürün Sergisi</h3>
+                            <p>Ürün tanıtımı web siteleri, ürünlerinizi geniş bir kitleye tanıtmak için mükemmel bir
+                                araçtır.
+                                Ürünlerinizi doğru kitleye ulaştırarak, marka bilinirliğinizi artırabilir ve
+                                satışlarınızı destekleyebilirsiniz.</p>
+                        </div>
+                    </div>
+                    <div class="type-box border">
+                        <svg class="w-25 h-25" viewBox="0 0 69 69" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M52.2414 27.1207C52.2414 41.0173 41.0171 52.2415 27.1205 52.2415C13.2239 52.2415 2 41.0173 2 27.1207C2 13.2241 13.2239 2 27.1205 2C41.5516 2.53448 52.2414 13.2241 52.2414 27.1207Z"
+                                  stroke="currentColor" stroke-width="2.2857" stroke-miterlimit="10"
+                                  stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M52.2414 27.1207C52.2414 41.0173 41.0171 52.2415 27.1205 52.2415C13.2239 52.2415 2 41.0173 2 27.1207C2 13.2241 13.2239 2 27.1205 2C41.5516 2.53448 52.2414 13.2241 52.2414 27.1207Z"
+                                  stroke="currentColor" stroke-opacity="0.2" stroke-width="2.2857"
+                                  stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M68.811 43.69C68.811 57.5866 57.5868 68.8109 43.6902 68.8109C29.7936 68.8109 18.5693 57.5866 18.5693 43.69C18.5693 29.7934 29.7936 18.5693 43.6902 18.5693C57.5868 18.5693 68.811 29.7934 68.811 43.69Z"
+                                  fill="currentColor"/>
+                            <path d="M68.811 43.69C68.811 57.5866 57.5868 68.8109 43.6902 68.8109C29.7936 68.8109 18.5693 57.5866 18.5693 43.69C18.5693 29.7934 29.7936 18.5693 43.6902 18.5693C57.5868 18.5693 68.811 29.7934 68.811 43.69Z"
+                                  fill="currentColor" fill-opacity="0.2"/>
+                        </svg>
+                        <div>
+                            <h3>Eğitim ve Öğretim Portalı</h3>
+                            <p>Eğitim sektöründe çalışıyorsanız, kendi web sitenizi oluşturarak bilgi ve becerilerinizi
+                                paylaşabilirsiniz.
+                                Ders notları, online dersler ve kaynaklar sunarak, potansiyel öğrencilerle iletişim
+                                kurabilir ve eğitim hizmetlerinizi tanıtabilirsiniz.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="pricing" class="d-flex align-items-center justify-content-center flex-column">
+            <div id="pricing-container">
+                <h1 class="text-center fw-light mb-5">Fiyatlandırma</h1>
+                <div class="d-flex justify-content-center flex-column flex-lg-row gap-5">
+                    <div style="background-color: var(--text)" class="card">
+                        <h3 class="align-self-center">Yazılım</h3>
+                        <h4 class="align-self-center">$1000 - $3000</h4>
+                        <ul class="d-flex flex-column gap-3 list-unstyled">
+                            <li>Özel UI/UX Dizayn</li>
+                            <li>Özel Yazılım Hizmeti</li>
+                            <li>Standart İçerik Yönetim Sistemi</li>
+                            <li>G-Analytics ve Search Console Entegrasyonları</li>
+                            <li>Kurumsal E-posta Hizmeti</li>
+                            <li>SEO Uyumlu</li>
+                            <li>Sıfırdan Wireframing + Figma Üzerinde UI/UX Tasarımı</li>
+                        </ul>
+                    </div>
+                    <div style="background-color: var(--text)" class="card">
+                        <h3 class="align-self-center">Dizayn</h3>
+                        <h4 class="align-self-center">$100 - $500</h4>
+                        <ul class="d-flex flex-column gap-3 list-unstyled">
+                            <li>Özel UI/UX Dizayn</li>
+                            <li>Özel Dashboard, Web Application, CRM Kurulum Hizmetleri</li>
+                            <li>Özel UI/UX Dizayn</li>
+                            <li>Özel UI/UX Dizayn</li>
+                            <li>Özel UI/UX Dizayn</li>
+                            <li>Özel UI/UX Dizayn</li>
+                            <li>Özel UI/UX Dizayn</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-5">
+                    <h5>
+                        <span>&egsdot;&nbsp;Girişimci desteği kapsamında 25 yaşından küçük girişimcilere %15 indirim</span>
+                    </h5>
+                    <h5><span>&egsdot;&nbsp;Tasarımlarımızın hepsi müşterilerimize özel hazırlanmaktadır ve hazır şablon kullanılmamaktadır.</span>
+                    </h5>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}
+</body>
+{% block scripts %}
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+    <script>
+        document.documentElement.setAttribute('data-theme', 'yellow')
+    </script>
+{% endblock %}
+</html>
