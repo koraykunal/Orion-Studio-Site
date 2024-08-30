@@ -180,7 +180,8 @@
                         </svg>
                         <div>
                             <h3>Kurumsal Tanıtım</h3>
-                            <p class="">Şirketinizi ve hizmetlerinizi etkili bir şekilde tanıtan temel bir kurumsal tanıtım web
+                            <p class="">Şirketinizi ve hizmetlerinizi etkili bir şekilde tanıtan temel bir kurumsal
+                                tanıtım web
                                 sitesi.</p>
                         </div>
                     </div>
@@ -299,6 +300,12 @@
     <script src="{% static 'js/3rd_libs/aos.js' %}"></script>
     <script>
         AOS.init({disable: 'mobile'});
+    </script>
+    <script>
+        footerLogoB = document.getElementById('footer-logo-black');
+        footerLogoW = document.getElementById('footer-logo-white');
+        footerLogoB.style.display = 'block';
+        footerLogoW.style.display = 'none';
     </script>
     <script>
         document.documentElement.setAttribute('data-theme', 'dark')
