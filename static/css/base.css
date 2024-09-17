@@ -152,7 +152,7 @@ html[data-theme='red'] {
 }
 
 html[data-theme='blue'] {
-    --text: #0d8dda;
+    --text: #00507c;
     --background: #fceaf7;
     --secondary: rgba(13, 141, 218, 0.2);
 }
