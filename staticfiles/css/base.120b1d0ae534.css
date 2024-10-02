@@ -11,12 +11,12 @@ body {
 
 @font-face {
     font-family: base-font;
-    src: url(../fonts/Red_Hat_Display/static/RedHatDisplay-Light.ttf);
+    src: url("../fonts/Red_Hat_Display/static/RedHatDisplay-Light.7007bab8d9f8.ttf");
 }
 
 @font-face {
     font-family: content-font;
-    src: url(../fonts/Red_Hat_Display/static/RedHatDisplay-Regular.ttf);
+    src: url("../fonts/Red_Hat_Display/static/RedHatDisplay-Regular.f913c823bff6.ttf");
 }
 
 ::-webkit-scrollbar {
